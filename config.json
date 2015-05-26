@@ -1,0 +1,98 @@
+{
+    "title": "DN.js Zone",
+    "meta": {
+        "author": "Dean Shi",
+        "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
+        "keywords": "Dean Shi, Software Engineer, Geek, experience, education, skills",
+        "copyright": "DN",
+        "language": "ES"
+    },
+    "info": {
+        "name": "Dean Shi",
+        "title": "Software Engineer / Geek",
+        "email": {
+            "user": "im",
+            "host": "deanshi.com"
+        },
+        "labels": [{
+            "id": "github",
+            "icon": "github",
+            "color": "orange",
+            "name": "Github",
+            "url": "https://github.com/dnshi"
+        }, {
+            "id": "linkedin",
+            "icon": "linkedin",
+            "color": "orange",
+            "name": "LinkedIn",
+            "url": "https://ca.linkedin.com/in/deanshi"
+        }, {
+            "id": "email"
+        }, {
+            "id": "location",
+            "icon": "marker",
+            "color": "teal",
+            "name": "Vancouver,BC",
+            "url": "https://www.google.ca/maps/place/Vancouver,+BC"
+        }]
+    },
+
+    "exp": [{
+        "name": "Istuary Innovation Labs Inc.",
+        "period": "April 2014 - Present",
+        "location": "Vancouver, British Columbia",
+        "occupation": "Software Engineer",
+        "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on our core product. Also Designed and implemented the infrastructure of the frontend project in JavaScript. "
+    }, {
+        "name": "Electronic Arts, Inc.",
+        "period": "Jan 2013 - Aug 2013",
+        "location": "Burnaby, British Columbia",
+        "occupation": "Associate Software Engineer",
+        "description": "Worked on FIFA Online Services team(FIFA 14), and participated in the full cycle of developing a video game. Java was used most frequently, and I had one month working at Load Test team to write test scripts for the online services"
+    }, {
+        "name": "Novex Software Development Inc.",
+        "period": "May 2012 - Aug 2012",
+        "location": "New Minas, Nova Scotia",
+        "occupation": "Software Developer",
+        "description": "Understood serial communications protocols between a device(client) to a server, and implemented in C and Java to control data transmission."
+    }],
+
+    "edu": [{
+        "degree": "Bachelor of Computer Science with Co-operative Program",
+        "school": "Acadia University",
+        "location": "Wolfville, Nova Scotia, Canada",
+        "period": "Sept 2009 - May 2014"
+    }],
+
+    "skills": [{
+        "name": "HTML5 & CSS3 / LESS / Stylus",
+        "percent": 96
+    }, {
+        "name": "JavaScript (ES5 / ES6)",
+        "percent": 93
+    }, {
+        "name": "AngularJS",
+        "percent": 88
+    }, {
+        "name": "NodeJS",
+        "percent": 85
+    }, {
+        "name": "Gulp / Browserify",
+        "percent": 84
+    }, {
+        "name": "Java",
+        "percent": 78
+    }, {
+        "name": "Unix / Linux",
+        "percent": 74
+    }, {
+        "name": "Git",
+        "percent": 74
+    }, {
+        "name": "MySQL",
+        "percent": 70
+    }, {
+        "name": "Shell / GoLang / Docker",
+        "percent": 68
+    }]
+}

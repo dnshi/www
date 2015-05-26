@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <% for (var key in meta) if (meta.hasOwnProperty(key)) { %>
+  <meta name="<%= key %>" content="<%= meta[key] %>">
+  <% } %>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Container -->
+  <main class="ui stackable two column grid">
+    <!-- Left Panel -->
+    <aside class="center aligned six wide column">
+      <div class="inner">
+        <h1 class="ui header">
+          <%= info.name %>
+          <div class="sub header"><%= info.title %></div>
+        </h1>
+        <div class="ui horizontal list social">
+
+        <!-- Render Labels -->
+        <% for (var i in info.labels) { %>
+          <div id="<%= info.labels[i].id %>" class="item">
+            <% if (info.labels[i].name && info.labels[i].icon) { %>
+            <a href="<%= info.labels[i].url %>" class="ui large <%= info.labels[i].color %> label">
+              <i class="<%= info.labels[i].icon %> icon"></i><%= info.labels[i].name %></a>
+            <% } %>
+          </div>
+        <% } %>
+        <!-- / Render Labels -->
+
+        </div>
+        <div class="ui left aligned stacked segment summary" style="display: none">
+          <p>Hey, this is Dean, a Full Stack software engineer and coding addict. My area is mainly focusing on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing work flow. </p>
+          <p>I graduated at Acadia University, Nova Scotia. During that four years at Acadia, I finished in total one year co-op study, involving eight months working at EA Canada. Also I participated twice ACM programming contest. And currently I am living in Vancouver, British Columbia. </p>
+          <p>Actually, this hidden message could be a bonus. Personally it is better than showing this message on console.log...Originally, I was thinking of commenting this message out. But then after, html minifier removed all "unnecessary" comments. Therefore, I hid it.</p>
+          <p>I will add more later!</p>
+        </div>
+        <span class="angle down"><i class="angle double down big icon"></i></span>
+      </div>
+    </aside>
+    <!-- / Left Panel -->
+
+    <!-- Right Panel -->
+    <section class="ten wide column">
+      <div class="ui basic segment experience">
+        <h2 class="ui header">
+          <i class="map icon"></i>
+          <div class="content">Experience</div>
+        </h2>
+
+        <!-- Render Exp -->
+        <% for (var i in exp) { %>
+        <div class="ui stackable grid">
+          <div class="six wide column title">
+            <div class="ui medium header">
+              <%= exp[i].name %>
+              <div class="sub header"><%= exp[i].period %></div>
+              <div class="sub header"><%= exp[i].location %></div>
+            </div>
+          </div>
+          <div class="ten wide column content">
+            <div class="ui medium header">
+              <%= exp[i].occupation %>
+              <div class="sub header"><%= exp[i].description %></div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+        <!-- / Render Exp -->
+
+      </div>
+
+      <div class="ui basic segment education">
+        <h2 class="ui header">
+          <i class="student icon"></i>
+          <div class="content">Education</div>
+        </h2>
+
+        <!-- Render Edu -->
+        <% for (var i in edu) { %>
+        <div class="ui stackable grid">
+          <div class="sixteen wide column">
+            <div class="ui medium header">
+              <%= edu[i].degree %>
+              <div class="sub header"><%= edu[i].school %> <i class="at icon"></i> <%= edu[i].location %></div>
+              <div class="sub header"><%= edu[i].period %></div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+        <!-- / Render Edu -->
+
+      </div>
+
+      <div class="ui basic segment skills">
+        <h2 class="ui header">
+          <i class="lab icon"></i>
+          <div class="content">Skills</div>
+        </h2>
+        <div class="ui stackable grid">
+          <div class="eight wide column">
+
+          <!-- Render Skills -->
+          <% var half = Math.round(skills.length / 2); for (var i in skills) { %>
+          <% if (i == half) { %>
+          </div>
+          <div class="eight wide column">
+          <% } %>
+            <div class="ui active indicating small progress" data-percent="<%= skills[i].percent %>">
+              <div class="label"><%= skills[i].name %></div>
+              <div class="bar" style="width: <%= skills[i].percent %>%">
+                <div class="progress"><%= skills[i].percent %>%</div>
+              </div>
+            </div>
+          <% } %>
+          <!-- / Render Skills -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / Right Panel -->
+
+    <!-- Copyrigh? -->
+    <footer class="six wide column">
+      <i class="copyright icon"></i>2015 DN</footer>
+    <!-- / -->
+  </main>
+  <script>
+  // Prevent my email address being collected
+  var username = "<%= info.email.user %>";
+  var hostname = "<%= info.email.host %>";
+  var linktext = username + "@" + hostname;
+  document.getElementById('email').innerHTML = '<a href="mailto:' + username + '@' + hostname + '" class="ui large green label"><i class="mail icon"></i>' + linktext + '</a>';
+  </script>
+</body>
+
+</html>

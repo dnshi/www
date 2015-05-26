@@ -1,0 +1,105 @@
+// Override semantic ui styles
+.ui.grid
+  margin 0
+
+.at.icon
+  margin-right 0 !important
+
+.ui.progress
+  background rgba(0, 0, 0, .17)
+  .bar > .progress
+    color rgba(50, 50, 50, .8)
+
+span.angle.down
+  position absolute
+  bottom 5px
+  margin-left -20px
+
+// Tags
+main
+  height 100%
+
+aside
+  min-height 100%
+  display flex !important
+  justify-content center
+  align-items center
+
+section
+  min-height 100%
+  background-color rgb(58, 60, 64)
+  position absolute !important
+  right 0
+
+footer
+  font-size 15px
+  position absolute !important
+  bottom 0
+
+// Classes
+.ui.list
+  .social > .item
+    margin 0
+    padding-left 5px
+    padding-right 5px
+
+  .item a
+    color rgba(255, 255, 255, 0.9)!important
+    &:hover
+      color white !important
+
+.basic.segment
+  .header, .label
+    color white
+    font-weight 500
+
+  & > .header
+    color rgb(127, 222, 228)
+
+  .header .sub.header
+    margin-top 10px
+    color rgb(168, 173, 179)
+
+  .content > .header
+    padding-left 15px
+
+// Responsive:PC
+@media only screen and (min-width 768px)
+  aside, section
+    position absolute !important
+    top 0
+    bottom 0
+    overflow auto
+
+  aside
+    max-width 420px !important
+
+  section
+    right 0
+    padding-top 25px !important
+    padding-left 25px !important
+    padding-right 25px !important
+
+  span.angle.down
+    display none
+
+  .basic.segment > .header
+    padding-left 1rem
+    padding-right 1rem
+
+
+@media only screen and (min-width 1120px)
+  .ui.column.grid>[class*="ten wide"].column
+    left 420px
+    width auto !important
+
+
+@media only screen and (min-width 1420px)
+  .ui.basic.segment
+    width 889px
+    margin 5% auto 0 auto
+
+// Respsonsive:Mobile
+@media only screen and (max-width 767px)
+  aside.center.aligned.six.wide.column
+    display flex !important
