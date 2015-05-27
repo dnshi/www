@@ -136,9 +136,9 @@
   </main>
   <script>
   // Prevent my email address being collected
-  var username = "<%= info.email.user %>";
-  var hostname = "<%= info.email.host %>";
-  var linktext = username + "@" + hostname;
+  var username = '<%= info.email.user %>';
+  var hostname = '<%= info.email.host %>';
+  var linktext = username + '@' + hostname;
   document.getElementById('email').innerHTML = '<a href="mailto:' + username + '@' + hostname + '" class="ui large green label"><i class="mail icon"></i>' + linktext + '</a>';
   </script>
 </body>
