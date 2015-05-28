@@ -103,3 +103,17 @@ footer
 @media only screen and (max-width 767px)
   aside.center.aligned.six.wide.column
     display flex !important
+
+// Animation
+.pulsate-opacity
+  animation pulsate-op 2.3s infinite
+
+@keyframes pulsate-op
+  0%
+    opacity: 0.2
+
+  50%
+    opacity: 1
+
+  100%
+    opacity: 0.2
