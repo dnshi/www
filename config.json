@@ -42,19 +42,19 @@
         "period": "April 2014 - Present",
         "location": "Vancouver, British Columbia",
         "occupation": "Software Engineer",
-        "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on our core product. Also Designed and implemented the infrastructure of the frontend project in JavaScript. "
+        "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on our core product. Also designed and implemented the infrastructure of the frontend project in JavaScript. "
     }, {
         "name": "Electronic Arts, Inc.",
         "period": "Jan 2013 - Aug 2013",
         "location": "Burnaby, British Columbia",
         "occupation": "Associate Software Engineer",
-        "description": "Worked on FIFA Online Services team(FIFA 14), and participated in the full cycle of developing a video game. Java was used most frequently, and I had one month working at Load Test team to write test scripts for the online services"
+        "description": "Worked on FIFA Online Services team (FIFA 14), and participated in the full cycle of developing a video game. Java was used most frequently, and I had one month working at Load Test team to write test scripts for the online services"
     }, {
         "name": "Novex Software Development Inc.",
         "period": "May 2012 - Aug 2012",
         "location": "New Minas, Nova Scotia",
         "occupation": "Software Developer",
-        "description": "Understood serial communications protocols between a device(client) to a server, and implemented in C and Java to control data transmission."
+        "description": "Understood serial communications protocols between a device (client) to a server, and implemented in C and Java to control data transmission."
     }],
 
     "edu": [{
