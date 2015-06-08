@@ -21,6 +21,12 @@
             "name": "Github",
             "url": "https://github.com/dnshi"
         }, {
+            "id": "gitlab",
+            "icon": "git",
+            "color": "orange",
+            "name": "Gitlab",
+            "url": "https://git.deanshi.com/dshi"
+        }, {
             "id": "linkedin",
             "icon": "linkedin",
             "color": "orange",
