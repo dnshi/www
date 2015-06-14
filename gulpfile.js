@@ -27,5 +27,11 @@ gulp.task('stylus', function () {
         .pipe(gulp.dest('./dist'));
 });
 
+// Move png files to dist
+gulp.task('png', function () {
+    return gulp.src('./*.png')
+        .pipe(gulp.dest('./dist'));
+});
+
 // Build
-gulp.task('default', ['ejs', 'stylus']);
+gulp.task('default', ['ejs', 'stylus', 'png']);
