@@ -10,6 +10,7 @@
   <title><%= title %></title>
   <link href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" rel="icon" type="image/x-icon">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
   <link rel="stylesheet" href="/static/main.css">
 </head>
 
@@ -115,7 +116,7 @@
           <div class="eight wide column">
           <% } %>
             <div class="ui active indicating small progress" data-percent="<%= skills[i].percent %>">
-              <div class="label"><%= skills[i].name %></div>
+              <div class="label"><%- skills[i].name %></div>
               <div class="bar" style="width: <%= skills[i].percent %>%">
                 <div class="progress"><%= skills[i].percent %>%</div>
               </div>

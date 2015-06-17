@@ -71,34 +71,34 @@
     }],
 
     "skills": [{
-        "name": "HTML5 & CSS3 / LESS / Stylus",
+        "name": "<i class=\"devicon-html5-plain\"></i> HTML5 & <i class=\"devicon-css3-plain\"></i> CSS3 / <i class=\"devicon-less-plain-wordmark\" style=\"font-size: 2rem;position: absolute;margin-top: -5px;\"></i> <span style=\"opacity:0\">LESS</span>",
         "percent": 96
     }, {
-        "name": "JavaScript (ES5 / ES6)",
+        "name": "<i class=\"devicon-javascript-plain\"></i> JavaScript (ES5 / ES6)",
         "percent": 93
     }, {
-        "name": "AngularJS",
+        "name": "<i class=\"devicon-angularjs-plain\"></i> AngularJS / <i class=\"devicon-jquery-plain\"></i> jQuery",
         "percent": 88
     }, {
-        "name": "NodeJS",
+        "name": "<i class=\"devicon-nodejs-plain\"></i> NodeJS",
         "percent": 85
     }, {
-        "name": "Gulp / Browserify",
+        "name": "<i class=\"devicon-gulp-plain\"></i> Gulp / <i class=\"devicon-grunt-plain\"></i> Grunt",
         "percent": 84
     }, {
-        "name": "Java",
+        "name": "<i class=\"devicon-java-plain\"></i> Java",
         "percent": 78
     }, {
-        "name": "Unix / Linux",
+        "name": "<i class=\"devicon-apple-original\"></i> Unix / <i class=\"devicon-linux-plain\"></i> Linux",
         "percent": 74
     }, {
-        "name": "Git",
+        "name": "<i class=\"devicon-git-plain\"></i></i> Git",
         "percent": 74
     }, {
-        "name": "MySQL",
+        "name": "<i class=\"devicon-mysql-plain\"></i> MySQL / <i class=\"devicon-mongodb-plain\"></i> MongoDB",
         "percent": 70
     }, {
-        "name": "Shell / GoLang / Docker",
+        "name": "<i class=\"devicon-go-plain\"></i> GoLang / <i class=\"devicon-docker-plain\">Docker",
         "percent": 68
     }]
 }
