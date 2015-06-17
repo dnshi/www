@@ -98,7 +98,7 @@
         "name": "<i class=\"devicon-mysql-plain\"></i> MySQL / <i class=\"devicon-mongodb-plain\"></i> MongoDB",
         "percent": 70
     }, {
-        "name": "<i class=\"devicon-go-plain\"></i> GoLang / <i class=\"devicon-docker-plain\"> Docker",
+        "name": "<i class=\"devicon-go-plain\"></i> GoLang / <i class=\"devicon-docker-plain\"></i> Docker",
         "percent": 68
     }]
 }
