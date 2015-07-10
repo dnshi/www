@@ -8,7 +8,7 @@ You will need Node.js or io.js installed on your machine. Then run:
 
 ``` shell
 # Clone the source
-git clone http://git.deanshi.com/dshi/www.git && cd www
+git clone https://github.com/dnshi/www.git && cd www
 # Install dependencies
 npm install
 # Optional: Make sure you have gulp installed globally
