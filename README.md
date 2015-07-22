@@ -17,4 +17,4 @@ npm install gulp -g
 gulp
 ```
 
-Minified html and css are in the `dist` folder.
+Minified html and css files are under the `dist` folder.
