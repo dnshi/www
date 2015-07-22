@@ -1,11 +1,13 @@
 {
   "name": "DN.js_Zone",
   "version": "1.0.0",
+  "homepage": "https://deanshi.com",
   "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
   "author": "Dean Shi",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dnshi/www"
   },
   "devDependencies": {
     "del": "^1.2.0",
