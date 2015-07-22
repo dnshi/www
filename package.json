@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://deanshi.com",
   "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
-  "author": "Dean Shi",
+  "author": "Dean Shi <dean.xiaoshi@gmail.com> (https://github.com/dnshi)",
   "license": "MIT",
   "repository": {
     "type": "git",
