@@ -18,3 +18,7 @@ gulp
 ```
 
 Minified html and css files are under the `dist` folder.
+
+### Resume
+You can also see [my resume](http://resume.github.io/?dnshi), powered by [RESUME](https://github.com/resume/resume.github.com)
+
