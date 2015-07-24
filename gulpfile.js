@@ -3,6 +3,7 @@ var ejs = require('gulp-ejs');
 var stylus = require('gulp-stylus');
 var minifyHTML = require('gulp-minify-html');
 var autoprefixer = require('gulp-autoprefixer');
+var ghPages = require('gulp-gh-pages');
 var del = require('del');
 var fs = require('fs');
 var config = require('./config.json');
@@ -47,5 +48,11 @@ gulp.task('clean', (function () {
     };
 })());
 
+// Deploy to Github Pages
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 // Build
-gulp.task('default', ['ejs', 'stylus', 'copy']);
+gulp.task('default', ['ejs', 'copy']);

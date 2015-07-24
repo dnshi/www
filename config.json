@@ -21,12 +21,6 @@
             "name": "Github",
             "url": "https://github.com/dnshi"
         }, {
-            "id": "gitlab",
-            "icon": "git",
-            "color": "orange",
-            "name": "Gitlab",
-            "url": "https://git.deanshi.com/explore/projects"
-        }, {
             "id": "linkedin",
             "icon": "linkedin",
             "color": "orange",
@@ -44,8 +38,14 @@
     },
 
     "exp": [{
+        "name": "ACL Services Ltd.",
+        "period": "June 2015 - Present",
+        "location": "Vancouver, British Columbia",
+        "occupation": "Software Engineer",
+        "description": "Working on AX team, and playing around AngularJS, UnderscoreJS, Gulp, Foundation, Jasmine, and Karma. Current product is Offline Project Manager (OPM)."
+    }, {
         "name": "Istuary Innovation Labs Inc.",
-        "period": "April 2014 - Present",
+        "period": "April 2014 - June 2015",
         "location": "Vancouver, British Columbia",
         "occupation": "Software Engineer",
         "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on our core product. Also designed and implemented the infrastructure of the frontend project in JavaScript. "
