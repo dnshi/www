@@ -40,6 +40,11 @@ gulp.task('copy', ['clean'], function () {
         .pipe(gulp.dest('./dist/static'));
 });
 
+gulp.task('cname', ['default'], function () {
+    return gulp.src('./CNAME')
+        .pipe(gulp.dest('./dist'));
+});
+
 // Clean dist
 gulp.task('clean', (function () {
     var triggered = false;
@@ -49,7 +54,7 @@ gulp.task('clean', (function () {
 })());
 
 // Deploy to Github Pages
-gulp.task('deploy', function() {
+gulp.task('deploy', ['cname'], function () {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
