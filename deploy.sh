@@ -4,11 +4,12 @@ set -e # exit with nonzero exit code if anything fails
 echo "Starting deployment"
 echo "Target: gh-pages branch"
 
-cd dist
-git init
+cd $DIST
+echo $CNAME > CNAME
 
-git config --global user.name "Travis CI"
-git config --global user.email "dean.xiaoshi@gmail.com"
+git init
+git config --global user.name $NAME
+git config --global user.email $EMAIL
 
 git add .
 git commit -m "Deployed to Github Pages $(date +'%Y-%m-%d %T')"
