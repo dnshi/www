@@ -4,6 +4,9 @@
   "homepage": "https://deanshi.com",
   "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
   "author": "Dean Shi <dean.xiaoshi@gmail.com> (https://github.com/dnshi)",
+  "scripts": {
+    "deploy": "./deploy.sh"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
