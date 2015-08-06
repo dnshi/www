@@ -1,10 +1,10 @@
 language: node_js
 node_js:
   - node
+git:
+  depth: 2
 before_script:
   - npm install -g gulp
-  - git config --global user.name "Dean Shi"
-  - git config --global user.email "dean.xiaoshi@gmail.com"
   - chmod +x ./deploy.sh
 script: gulp cname
 after_success: ./deploy.sh
