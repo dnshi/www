@@ -3,6 +3,7 @@ var ejs = require('gulp-ejs');
 var stylus = require('gulp-stylus');
 var minifyHTML = require('gulp-minify-html');
 var autoprefixer = require('gulp-autoprefixer');
+var merge = require('merge-stream');
 var del = require('del');
 var fs = require('fs');
 var config = require('./config.json');
@@ -16,13 +17,18 @@ gulp.task('ejs', ['clean', 'stylus'], function () {
         config.css = data;
     });
 
-    return gulp.src('./index.ejs')
+    var index = gulp.src('./index.ejs')
         .pipe(ejs(config))
         .pipe(minifyHTML({
             conditionals: true,
             spare: true
         }))
         .pipe(gulp.dest('./dist'));
+
+    var cname = gulp.src('./CNAME')
+        .pipe(gulp.dest('./dist'));
+
+    return merge(index, cname);
 });
 
 // Compile CSS from stylus files
@@ -37,11 +43,6 @@ gulp.task('stylus', ['clean'], function () {
 gulp.task('copy', ['clean'], function () {
     return gulp.src('./static/*.png')
         .pipe(gulp.dest('./dist/static'));
-});
-
-gulp.task('deploy', ['default'], function () {
-    return gulp.src('./CNAME')
-        .pipe(gulp.dest('./dist'));
 });
 
 // Clean dist
