@@ -6,7 +6,7 @@ git:
 before_script:
   - npm install -g gulp
   - chmod +x ./deploy.sh
-script: gulp cname
+script: gulp deploy
 after_success: ./deploy.sh
 env:
   global:

@@ -26,7 +26,5 @@ Temporary Items
 # Ignore logs, backup, dist and node modules
 *.log
 *.bk
-CNAME
-.publish/
 dist/
 node_modules/
