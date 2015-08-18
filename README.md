@@ -24,3 +24,6 @@ You can also see [my resume](http://resume.github.io/?dnshi), powered by [RESUME
 
 ### Dungeons & Developers
 As a fun way to assess, promote and learn the skills it takes to design and develop great web sites. You can access the [website](http://www.dungeonsanddevelopers.com/#_a2b2c2de2hi2jklm2noqx2y2_19_Dean Shi) to see my web development's level.
+
+### Old Personal Page
+I found my first personal web page hosted on our Acadia University server. This was almost the first try for HTML5 drag & drop feature and couple css3 styles. Click [HERE](http://falcon.acadiau.ca/~093997s/xiao_shi/) to access it!
