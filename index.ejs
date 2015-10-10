@@ -9,7 +9,16 @@
   <% } %>
   <title><%= title %></title>
   <link href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" rel="icon" type="image/x-icon">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.2/semantic.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/reset.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/site.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/grid.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/list.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/header.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/button.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/icon.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/progress.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/segment.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/flag.min.css">
   <link rel="stylesheet" href="//cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css">
   <style><%- css %></style>
 </head>
@@ -30,7 +39,7 @@
         <% for (var i in info.labels) { %>
           <div id="<%= info.labels[i].id %>" class="item">
             <% if (info.labels[i].name && info.labels[i].icon) { %>
-            <a href="<%= info.labels[i].url %>" class="ui large <%= info.labels[i].color %> label">
+            <a href="<%= info.labels[i].url %>" class="ui inverted basic <%= info.labels[i].color %> button">
               <i class="<%= info.labels[i].icon %> icon"></i><%= info.labels[i].name %></a>
             <% } %>
           </div>
@@ -147,7 +156,7 @@
   var username = '<%= info.email.user %>';
   var hostname = '<%= info.email.host %>';
   var linktext = username + '@' + hostname;
-  document.getElementById('email').innerHTML = '<a href="mailto:' + username + '@' + hostname + '" class="ui large green label"><i class="mail icon"></i>' + linktext + '</a>';
+  document.getElementById('email').innerHTML = '<a href="mailto:' + username + '@' + hostname + '" class="ui inverted basic green button"><i class="mail icon"></i>' + linktext + '</a>';
   </script>
 </body>
 

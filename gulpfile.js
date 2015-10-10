@@ -1,27 +1,22 @@
-var gulp = require('gulp');
-var ejs = require('gulp-ejs');
-var stylus = require('gulp-stylus');
-var minifyHTML = require('gulp-minify-html');
-var autoprefixer = require('gulp-autoprefixer');
-var del = require('del');
-var fs = require('fs');
-var config = require('./config.json');
+const
+gulp = require('gulp'),
+ejs = require('gulp-ejs'),
+stylus = require('gulp-stylus'),
+minifyHTML = require('gulp-minify-html'),
+autoprefixer = require('gulp-autoprefixer'),
+del = require('del'),
+fs = require('fs'),
+config = require('./config.json');
 
 // Compile EJS
 gulp.task('ejs', ['clean', 'stylus'], function () {
     fs.readFile('./dist/static/main.css', 'utf8', function (err, data) {
-        if (err) {
-            return console.log(err);
-        }
-        config.css = data;
+        return err ? console.log(err) : config.css = data;
     });
 
     return gulp.src('./index.ejs')
         .pipe(ejs(config))
-        .pipe(minifyHTML({
-            conditionals: true,
-            spare: true
-        }))
+        .pipe(minifyHTML({ conditionals: true, spare: true }))
         .pipe(gulp.dest('./dist'));
 });
 
@@ -40,12 +35,9 @@ gulp.task('copy', ['clean'], function () {
 });
 
 // Clean dist
-gulp.task('clean', (function () {
-    var triggered = false;
-    return function (cb) {
-        triggered ? cb() : triggered = !del('./dist', cb);
-    };
-})());
+gulp.task('clean', function (cb) {
+    return del('./dist', cb);
+});
 
 // Build
 gulp.task('default', ['ejs', 'copy']);

@@ -2,13 +2,13 @@
     "title": "Dean Shi - Software Engineer",
     "meta": {
         "author": "Dean Shi",
-        "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
+        "description": "This is Dean Shi's page, a Software Engineer and code addict. The area is mainly focusing on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing workflow. ",
         "keywords": "Dean Shi, Software Engineer, Geek, experience, education, skills",
         "copyright": "DN",
         "language": "ES"
     },
     "info": {
-        "name": "<span style=\"font-size:50%;color:#d95c5c\">var</span> Dean Shi",
+        "name": "<span style=\"font-size:1rem;color:#5DFF8A\">var</span> Dean Shi",
         "title": "= Software Engineer & Geek",
         "email": {
             "user": "im",
@@ -42,7 +42,7 @@
         "period": "June 2015 - Present",
         "location": "Vancouver, British Columbia",
         "occupation": "Software Engineer",
-        "description": "Working on AX team, and playing around AngularJS, UnderscoreJS, Gulp, Foundation, Jasmine, and Karma. Current product is Offline Project Manager (OPM)."
+        "description": "Front-end developer working at the Mercury team. Current projects are Offline Project Manager (OPM) and Launcher. Having a few small side projects with team members, which is to introduce the most cutting-edge technologies as a proof of concept (POC). "
     }, {
         "name": "Istuary Innovation Labs Inc.",
         "period": "April 2014 - June 2015",
