@@ -32,7 +32,7 @@
             "id": "location",
             "icon": "marker",
             "color": "teal",
-            "name": "Vancouver,BC",
+            "name": "Vancouver, BC",
             "url": "https://www.google.ca/maps/place/Vancouver,+BC"
         }]
     },
