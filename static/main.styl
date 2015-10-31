@@ -64,18 +64,29 @@ footer
 
 .basic.segment
   .header, .label
-    color white
     font-weight 500
 
-  & > .header
-    color rgb(127, 222, 228)
+  .medium.header i.icon
+    margin-right .25rem
+    font-size 1rem
 
-  .header .sub.header
+  .main.header i.icon
+    margin-right .2rem
+
+  .sub.header
     margin-top 10px
     color rgb(168, 173, 179)
 
-  .content > .header
-    padding-left 15px
+  .company, .school
+    color lightgreen !important
+    float left
+  .period
+    color lightskyblue !important
+    float right
+  .description
+    margin-top 2.5em
+    color rgba(255,255,255,.8)
+    line-height 1.5em
 
 .EOF > h2
   text-align center
@@ -130,10 +141,16 @@ footer
 
   section
     border-top 1px solid rgba(0, 0, 0, .005)
-
   footer
     left 0
     z-index 2
+
+  .basic.segment
+    .company, .school, .period
+      float none
+
+    .description
+      margin-top 0
 
 // Animation
 .pulsate-opacity
