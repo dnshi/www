@@ -75,10 +75,14 @@ footer
 
   .sub.header
     margin-top 10px
-    color rgb(168, 173, 179)
 
   .company, .school
+    margin-right 1em !important
     color lightgreen !important
+  .school
+    float left
+  .location
+    color lightcoral!important
     float left
   .period
     color lightskyblue !important
@@ -125,6 +129,8 @@ footer
     left 420px
     width auto !important
 
+  .basic.segment .company
+    float left
 
 @media only screen and (min-width 1420px)
   .ui.basic.segment
@@ -146,7 +152,7 @@ footer
     z-index 2
 
   .basic.segment
-    .company, .school, .period
+    .school, .location, .period
       float none
 
     .description

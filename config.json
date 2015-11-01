@@ -39,21 +39,25 @@
 
     "exp": [{
         "company": "ACL Services Ltd.",
+        "location": "Vancouver, BC",
         "period": "2015 - Present",
         "occupation": "Software Engineer",
         "description": "Front-end developer working at the Mercury team. Current projects are Offline Project Manager (OPM) and Launcher. Having a few small side projects with team members, which is to introduce the most cutting-edge technologies as a proof of concept (POC). "
     }, {
         "company": "Istuary Innovation Labs",
+        "location": "Vancouver, BC",
         "period": "2014 - 2015",
         "occupation": "Software Engineer",
         "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on our core product. Also designed and implemented the infrastructure of the frontend project in JavaScript. "
     }, {
         "company": "Electronic Arts",
+        "location": "Burnaby, BC",
         "period": "Jan 2013 - Aug 2013",
         "occupation": "Associate Software Engineer",
         "description": "Worked on FIFA Online Services team (FIFA 14), and participated in the full cycle of developing a video game. Java was used most frequently, and I had one month working at Load Test team to write test scripts for the online services"
     }, {
         "company": "Novex Software",
+        "location": "New Minas, NS",
         "period": "May 2012 - Aug 2012",
         "occupation": "Software Developer",
         "description": "Understood serial communications protocols between a device (client) to a server, and implemented in C and Java to control data transmission."
@@ -62,6 +66,7 @@
     "edu": [{
         "degree": "Bachelor of Computer Science with Co-operative Program",
         "school": "Acadia University",
+        "location": "Wolfvillw, NS",
         "period": "2009 - 2014"
     }],
 
