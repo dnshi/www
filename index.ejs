@@ -172,19 +172,17 @@
     </section>
     <!-- / Right Panel -->
 
-    <!-- Copyrigh? -->
+    <!-- Footer -->
     <footer class="six wide column">
       <img src="data:image/gif;base64,R0lGODlhEAALANUAAPXs7e7u7vKEieqHiPF6eulpbOcTG/r6+vA8Qumsq/39/ezj5PWQlPX19fLy8tkAANtESeRFR9gkKNw3OupeX/ijp+hdY+5zdqYAALgAAOvr6+59gckAANUZGe1uc95NU+ZOVOsoLMvLy8TExO1lZuVhZu4wOdtVWeJsbepYWPFLU+y9vukfJ95qa9TU1PXQ0/eeou7Ozb+/v/P19fSLkOpSXdsrL+jd2/SWmPWZnuJVW/j3+OjAwd8yN+E9QPT09CH5BAAAAAAALAAAAAAQAAsAAAaVQBUCEfoZjQ5H4MHkmCoVnGIKABwOu8LFw0FUGJvpYbCZNRoRUMFZoREUrxiJwls5fJFSxgQTXA5aHgUlEA49PhYZITkCHmMpFjURLQE2EzoZLDgbJAcAKCAgJwsBEj0fGQYMFxQ7DQAJCaQaHTYfGA80HikNPw43s7QSELgCGwW9SgHLGhMQxEwPHC4i1SPXMhjaGEEAOw=="/>
       <i class="copyright icon"></i>2015 DN</footer>
-    <!-- / -->
+    <!-- / Footer -->
   </main>
   <!-- / Container -->
   <script>
   // Prevent my email address being collected
-  var username = '<%= info.email.user %>';
-  var hostname = '<%= info.email.host %>';
-  var linktext = username + '@' + hostname;
-  document.getElementById('email').innerHTML = '<a href="mailto:' + username + '@' + hostname + '" class="ui inverted basic yellow button"><i class="mail icon"></i>' + linktext + '</a>';
+  var username = '<%= info.email.user %>', hostname = '<%= info.email.host %>', linktext = username + '@' + hostname;
+  document.getElementById('email').innerHTML = '<a href="mailto:' + linktext + '" class="ui inverted basic yellow button"><i class="mail icon"></i>' + linktext + '</a>';
   </script>
 </body>
 
