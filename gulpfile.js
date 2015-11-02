@@ -1,3 +1,5 @@
+/*eslint-env es6*/
+
 const
 gulp = require('gulp'),
 ejs = require('gulp-ejs'),
@@ -20,7 +22,7 @@ gulp.task('ejs', ['clean', 'stylus'], () => {
     .pipe(gulp.dest('./dist'));
 });
 
-// Compile CSS from stylus files
+// Compile stylus to css file
 gulp.task('stylus', ['clean'], () =>
   gulp.src('./static/main.styl')
     .pipe(stylus({ compress: true }))
