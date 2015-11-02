@@ -1,6 +1,6 @@
 # DEAN'S PERSONAL PAGE
 [![Build Status](https://travis-ci.org/dnshi/www.svg?branch=master)](https://travis-ci.org/dnshi/www)
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE.md)
+[![GitHub license](https://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
 
 This is Dean Shi's personal page to exhibit experience, education and skills
 
