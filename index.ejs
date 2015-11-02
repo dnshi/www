@@ -124,6 +124,14 @@
                 <%= edu[i].period %>
               </div>
             </div>
+            <div class="ui list description">
+              <% for (var j in edu[i].descriptions) { %>
+              <div class="item">
+                <i class="checkered flag icon""></i>
+                <div class="content"><%= edu[i].descriptions[j] %></div>
+              </div>
+              <% } %>
+            </div>
           </div>
         </div>
         <% } %>

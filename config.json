@@ -67,7 +67,8 @@
         "degree": "Bachelor of Computer Science with Co-operative Program",
         "school": "Acadia University",
         "location": "Wolfvillw, NS",
-        "period": "2009 - 2014"
+        "period": "2009 - 2014",
+        "descriptions": ["Twice attended ACM Programing contest", "Teaching Assistant for Software Engineering 1", "Teaching Assistant for Computer Programing 3"]
     }],
 
     "skills": [{
