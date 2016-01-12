@@ -11,7 +11,7 @@ after_success: ./build/deploy.sh
 env:
   global:
     - NAME: Dean Shi
-    - EMAIL: dean.xiaoshi@gmail
+    - EMAIL: dean.xiaoshi@gmail.com
     - CNAME: deanshi.com
     - GH_REF: github.com/dnshi/www.git
     - DIST: ./dist
