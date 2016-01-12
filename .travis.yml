@@ -5,9 +5,9 @@ git:
   depth: 2
 before_script:
   - npm install -g gulp
-  - chmod +x ./deploy.sh
+  - chmod +x ./build/deploy.sh
 script: gulp
-after_success: ./deploy.sh
+after_success: ./build/deploy.sh
 env:
   global:
     - NAME: Dean Shi

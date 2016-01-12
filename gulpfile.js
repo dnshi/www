@@ -8,7 +8,7 @@ minifyHTML = require('gulp-minify-html'),
 autoprefixer = require('gulp-autoprefixer'),
 del = require('del'),
 fs = require('fs'),
-config = require('./config.json');
+config = require('./src/config.json');
 
 // Compile EJS
 gulp.task('ejs', ['clean', 'stylus'], () => {
@@ -16,7 +16,7 @@ gulp.task('ejs', ['clean', 'stylus'], () => {
     err ? console.log(err) : config.css = data
   );
 
-  return gulp.src('./index.ejs')
+  return gulp.src('./src/index.ejs')
     .pipe(ejs(config))
     .pipe(minifyHTML({ conditionals: true, spare: true }))
     .pipe(gulp.dest('./dist'));
@@ -24,7 +24,7 @@ gulp.task('ejs', ['clean', 'stylus'], () => {
 
 // Compile stylus to css file
 gulp.task('stylus', ['clean'], () =>
-  gulp.src('./static/main.styl')
+  gulp.src('./src/main.styl')
     .pipe(stylus({ compress: true }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest('./dist/static'))

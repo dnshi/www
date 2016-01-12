@@ -1,0 +1,117 @@
+{
+  "title": "Dean Shi - Software Engineer",
+  "meta": {
+    "author": "Dean Shi",
+    "description": "This is Dean Shi's page, a Software Engineer and code addict. The area is mainly focusing on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing workflow. ",
+    "keywords": "Dean Shi, Software Engineer, Geek, experience, education, skills",
+    "copyright": "DN",
+    "language": "ES"
+  },
+  "links": [
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/reset.min.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/site.min.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/grid.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/list.min.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/header.min.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/button.min.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/icon.min.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/progress.min.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/segment.min.css",
+    "//cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css"
+  ],
+  "info": {
+    "name": "<span style=\"font-size:1rem;color:#5DFF8A\">var</span> Dean Shi",
+    "title": "= Software Engineer & Geek",
+    "email": {
+      "user": "im",
+      "host": "deanshi.com"
+    },
+    "labels": [{
+      "id": "github",
+      "icon": "github",
+      "color": "orange",
+      "name": "Github",
+      "url": "https://github.com/dnshi"
+    }, {
+      "id": "linkedin",
+      "icon": "linkedin",
+      "color": "blue",
+      "name": "LinkedIn",
+      "url": "https://ca.linkedin.com/in/deanshi"
+    }, {
+      "id": "email"
+    }, {
+      "id": "location",
+      "icon": "marker",
+      "color": "teal",
+      "name": "Vancouver, BC",
+      "url": "https://www.google.ca/maps/place/Vancouver,+BC"
+    }]
+  },
+
+  "exp": [{
+    "company": "ACL Services Ltd.",
+    "location": "Vancouver, BC",
+    "period": "2015 - Present",
+    "occupation": "Software Engineer",
+    "description": "Front-end developer working at the Mercury team. Current projects are Offline Project Manager (OPM) and Launcher. Having a few small side projects with team members, which is to introduce the most cutting-edge technologies as a proof of concept (POC). "
+  }, {
+    "company": "Istuary Innovation Labs",
+    "location": "Vancouver, BC",
+    "period": "2014 - 2015",
+    "occupation": "Software Engineer",
+    "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on our core product. Also designed and implemented the infrastructure of the frontend project in JavaScript. "
+  }, {
+    "company": "Electronic Arts",
+    "location": "Burnaby, BC",
+    "period": "Jan 2013 - Aug 2013",
+    "occupation": "Associate Software Engineer",
+    "description": "Worked on FIFA Online Services team (FIFA 14), and participated in the full cycle of developing a video game. Java was used most frequently, and I had one month working at Load Test team to write test scripts for the online services"
+  }, {
+    "company": "Novex Software",
+    "location": "New Minas, NS",
+    "period": "May 2012 - Aug 2012",
+    "occupation": "Software Developer",
+    "description": "Understood serial communications protocols between a device (client) to a server, and implemented in C and Java to control data transmission."
+  }],
+
+  "edu": [{
+    "degree": "Bachelor of Computer Science with Co-operative Program",
+    "school": "Acadia University",
+    "location": "Wolfvillw, NS",
+    "period": "2009 - 2014",
+    "descriptions": ["Twice attended ACM Programing contest", "Teaching Assistant for Software Engineering 1", "Teaching Assistant for Computer Programing 3"]
+  }],
+
+  "skills": [{
+    "name": "<i class=\"devicon-html5-plain\"></i> HTML5 & <i class=\"devicon-css3-plain\"></i> CSS3 / <i class=\"devicon-less-plain-wordmark\" style=\"font-size: 2rem;position: absolute;margin-top: -5px;\"></i> <span style=\"opacity:0\">LESS</span>",
+    "percent": 96
+  }, {
+    "name": "<i class=\"devicon-javascript-plain\"></i> JavaScript (ES5 / ES6)",
+    "percent": 93
+  }, {
+    "name": "<i class=\"devicon-angularjs-plain\"></i> AngularJS / <i class=\"devicon-jquery-plain\"></i> jQuery",
+    "percent": 88
+  }, {
+    "name": "<i class=\"devicon-nodejs-plain\"></i> NodeJS",
+    "percent": 85
+  }, {
+    "name": "<i class=\"devicon-gulp-plain\"></i> Gulp / <i class=\"devicon-grunt-plain\"></i> Grunt",
+    "percent": 84
+  }, {
+    "name": "<i class=\"devicon-java-plain\"></i> Java",
+    "percent": 78
+  }, {
+    "name": "<i class=\"devicon-apple-original\"></i> Unix / <i class=\"devicon-linux-plain\"></i> Linux",
+    "percent": 74
+  }, {
+    "name": "<i class=\"devicon-git-plain\"></i></i> Git",
+    "percent": 74
+  }, {
+    "name": "<i class=\"devicon-mysql-plain\"></i> MySQL / <i class=\"devicon-mongodb-plain\"></i> MongoDB",
+    "percent": 70
+  }, {
+    "name": "<i class=\"devicon-go-plain\"></i> GoLang / <i class=\"devicon-docker-plain\"></i> Docker",
+    "percent": 68
+  }]
+}
