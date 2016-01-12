@@ -4,7 +4,7 @@ const
 gulp = require('gulp'),
 ejs = require('gulp-ejs'),
 stylus = require('gulp-stylus'),
-minifyHTML = require('gulp-minify-html'),
+htmlmin = require('gulp-htmlmin'),
 autoprefixer = require('gulp-autoprefixer'),
 del = require('del'),
 fs = require('fs'),
@@ -18,7 +18,7 @@ gulp.task('ejs', ['clean', 'stylus'], () => {
 
   return gulp.src('./src/index.ejs')
     .pipe(ejs(config))
-    .pipe(minifyHTML({ conditionals: true, spare: true }))
+    .pipe(htmlmin({removeComments: true, collapseWhitespace: true, removeAttributeQuotes: true}))
     .pipe(gulp.dest('./dist'));
 });
 
