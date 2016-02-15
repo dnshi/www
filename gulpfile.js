@@ -1,5 +1,3 @@
-/*eslint-env es6*/
-
 const
 gulp = require('gulp'),
 ejs = require('gulp-ejs'),
