@@ -54,7 +54,7 @@
     "location": "Vancouver, BC",
     "period": "2015 - Present",
     "occupation": "Software Engineer",
-    "description": "Front-end developer working at the Mercury team. Current projects are Offline Project Manager (OPM) and Launcher. Having a few small side projects with team members, which is to introduce the most cutting-edge technologies as a proof of concept (POC). "
+    "description": "Front-end developer and having been working on multiple core products as well as developing a few simple side projects with team members, which were to introduce the most cutting-edge technologies as proof of concepts and spikes. "
   }, {
     "company": "Istuary Innovation Labs",
     "location": "Vancouver, BC",
@@ -87,10 +87,10 @@
     "name": "<i class=\"devicon-html5-plain\"></i> HTML5 & <i class=\"devicon-css3-plain\"></i> CSS3 / <i class=\"devicon-less-plain-wordmark\" style=\"font-size: 2rem;position: absolute;margin-top: -5px;\"></i> <span style=\"opacity:0\">LESS</span>",
     "percent": 96
   }, {
-    "name": "<i class=\"devicon-javascript-plain\"></i> JavaScript (ES5 / ES6)",
+    "name": "<i class=\"devicon-javascript-plain\"></i> JavaScript (ES5 / ES6 / ES7)",
     "percent": 93
   }, {
-    "name": "<i class=\"devicon-angularjs-plain\"></i> AngularJS / <i class=\"devicon-jquery-plain\"></i> jQuery",
+    "name": "<i class=\"devicon-angularjs-plain\"></i> AngularJS / <i class=\"devicon-react-original\"></i> ReactJS",
     "percent": 88
   }, {
     "name": "<i class=\"devicon-nodejs-plain\"></i> NodeJS",
