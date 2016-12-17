@@ -10,7 +10,7 @@
   "links": [
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/reset.min.css",
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/site.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/grid.css",
+    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/grid.min.css",
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/list.min.css",
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/header.min.css",
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/button.min.css",
