@@ -20,34 +20,32 @@
   <main class="ui stackable two column grid">
     <!-- Left Panel -->
     <aside class="center aligned six wide column">
-      <div class="inner">
-        <h1 class="ui header">
-          <%- info.name %>
-          <span class="sub header" style="display:block"><%= info.title %></span>
-        </h1>
-        <div class="ui horizontal list social">
+      <h1 class="ui header">
+        <%- info.name %>
+        <span class="sub header" style="display:block"><%= info.title %></span>
+      </h1>
+      <div class="ui horizontal list social">
 
-        <!-- Render Labels -->
-        <% for (var i in info.labels) { %>
-          <div id="<%= info.labels[i].id %>" class="item">
-            <% if (info.labels[i].name && info.labels[i].icon) { %>
-            <a href="<%= info.labels[i].url %>" class="ui inverted basic <%= info.labels[i].color %> button">
-              <i class="<%= info.labels[i].icon %> icon"></i><%= info.labels[i].name %></a>
-            <% } %>
-          </div>
-        <% } %>
-        <!-- / Render Labels -->
+      <!-- Render Labels -->
+      <% for (var i in info.labels) { %>
+        <div id="<%= info.labels[i].id %>" class="item">
+          <% if (info.labels[i].name && info.labels[i].icon) { %>
+          <a href="<%= info.labels[i].url %>" class="ui inverted basic <%= info.labels[i].color %> button">
+            <i class="<%= info.labels[i].icon %> icon"></i><%= info.labels[i].name %></a>
+          <% } %>
+        </div>
+      <% } %>
+      <!-- / Render Labels -->
 
-        </div>
-        <div class="ui left aligned stacked segment summary" style="display: none">
-          <p>Hey, this is Dean, a Full Stack software engineer and code addict. My area is mainly focusing on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing work flow. </p>
-          <p>I graduated at Acadia University, Nova Scotia. During that four years at Acadia, I finished in total one year co-op study, involving eight months working at EA Canada. Also I participated twice ACM programming contest. And currently I am living in Vancouver, British Columbia. </p>
-          <p>Actually, this hidden message could be a bonus. Personally it is better than showing this message on console.log...Originally, I was thinking of commenting this message out. But then after, html minifier removed all "unnecessary" comments. Therefore, I hid it.</p>
-          <p>I used to have a VPS hosted on OVH, but later I found I had wasted too much time on maintaining the server. It's a pain...So now this web page is hosted on Github Pages. </p>
-          <p>I will add more later!</p>
-        </div>
-        <span class="angle down"><i class="angle double down big icon pulsate-opacity"></i></span>
       </div>
+      <div class="ui left aligned stacked segment summary" style="display: none">
+        <p>Hey, this is Dean, a Full Stack software engineer and code addict. My area is mainly focusing on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing work flow. </p>
+        <p>I graduated at Acadia University, Nova Scotia. During that four years at Acadia, I finished in total one year co-op study, involving eight months working at EA Canada. Also I participated twice ACM programming contest. And currently I am living in Vancouver, British Columbia. </p>
+        <p>Actually, this hidden message could be a bonus. Personally it is better than showing this message on console.log...Originally, I was thinking of commenting this message out. But then after, html minifier removed all "unnecessary" comments. Therefore, I hid it.</p>
+        <p>I used to have a VPS hosted on OVH, but later I found I had wasted too much time on maintaining the server. It's a pain...So now this web page is hosted on Github Pages. </p>
+        <p>I will add more later!</p>
+      </div>
+      <span class="angle down"><i class="angle double down big icon pulsate-opacity"></i></span>
     </aside>
     <!-- / Left Panel -->
 
