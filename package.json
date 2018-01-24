@@ -5,8 +5,8 @@
   "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
   "author": "Dean Shi <dean.xiaoshi@gmail.com> (https://github.com/dnshi)",
   "engines": {
-    "node": ">=5.0.0",
-    "npm": "^3.0.0"
+    "node": ">=8.0.0",
+    "npm": "^5.0.0"
   },
   "scripts": {
     "start": "http-server ./dist",
