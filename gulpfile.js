@@ -15,7 +15,7 @@ gulp.task('ejs', ['clean', 'stylus'], () => {
   );
 
   return gulp.src('./src/index.ejs')
-    .pipe(ejs(config))
+    .pipe(ejs(config, {}, { ext: '.html' }))
     .pipe(htmlmin({removeComments: true, collapseWhitespace: true, removeAttributeQuotes: true}))
     .pipe(gulp.dest('./dist'));
 });
