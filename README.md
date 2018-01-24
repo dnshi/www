@@ -12,10 +12,12 @@ You will need Node.js or io.js installed on your machine. Then run:
 git clone https://github.com/dnshi/www.git && cd www
 # Install dependencies
 npm install
-# Optional: Make sure you have gulp installed globally
-npm install gulp -g
 # Build
-gulp
+npm run build
+# Start server
+npm start
+
+open http://127.0.0.1:8080
 ```
 
 Minified html and css files are under the `dist` folder.
