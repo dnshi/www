@@ -50,6 +50,12 @@
   },
 
   "exp": [{
+    "company": "7Geese",
+    "location": "Vancouver, BC",
+    "period": "Mar 2018 - Sept 2018",
+    "occupation": "Software Developer",
+    "description": "70% Frontend developer + 30% Product designer. Influenced both development team and product design team and made strategic planning which dove deeply into customers' requirements and covered long-term thinking of business value."
+  }, {
     "company": "ACL Services Ltd.",
     "location": "Vancouver, BC",
     "period": "2015 - 2017",
