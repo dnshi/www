@@ -11,24 +11,33 @@ const config = require('./src/config.json')
 const readFileAsync = promisify(readFile)
 
 // Compile EJS
-gulp.task('ejs', ['clean', 'stylus'], async () => {
+async function runEJS() {
   config.css = await readFileAsync('./dist/static/main.css', 'utf8')
   return gulp.src('./src/index.ejs')
     .pipe(ejs(config, {}, { ext: '.html' }))
     .pipe(htmlmin({ removeComments: true, collapseWhitespace: true, removeAttributeQuotes: true }))
     .pipe(gulp.dest('./dist'))
-})
+}
 
 // Compile stylus to css file
-gulp.task('stylus', ['clean'], () =>
-  gulp.src('./src/main.styl')
+function runStylus() {
+  return gulp.src('./src/main.styl')
     .pipe(stylus({ compress: true }))
     .pipe(autoprefixer({ cascade: false }))
     .pipe(gulp.dest('./dist/static'))
-)
+}
 
 // Clean dist
-gulp.task('clean', (cb) => del('./dist', cb))
+const clean = () => del('./dist')
+
+// Export modules
+exports.clean = clean;
+exports.runStylus = runStylus;
+exports.runEJS = runEJS;
+
+// Run task
+const build = gulp.series(clean, runStylus, runEJS);
+gulp.task('build', build);
 
 // Build
-gulp.task('default', ['ejs'])
+gulp.task('default', build)
