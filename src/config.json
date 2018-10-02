@@ -50,11 +50,17 @@
   },
 
   "exp": [{
+    "company": "Amazon",
+    "location": "Vancouver, BC",
+    "period": "Sept 2018 - Present",
+    "occupation": "Web Development Engineer",
+    "description": ""
+  }, {
     "company": "7Geese",
     "location": "Vancouver, BC",
     "period": "Mar 2018 - Sept 2018",
     "occupation": "Software Developer",
-    "description": "70% Frontend developer + 30% Product designer. Influenced both development team and product design team and made strategic planning which dove deeply into customers' requirements and covered long-term thinking of business value."
+    "description": "70% Frontend developer + 30% Product designer. Influenced both development team and product design team and made strategic planning which dove deeply on customers' requirements and covered long-term thinking of business value."
   }, {
     "company": "ACL Services Ltd.",
     "location": "Vancouver, BC",
