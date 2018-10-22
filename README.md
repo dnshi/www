@@ -26,10 +26,10 @@ Minified html and css files are under the `dist` folder.
 You can also see [my resume](http://resume.github.io/?dnshi), powered by [RESUME](https://github.com/resume/resume.github.com)
 
 ### GitHub Profile Summary
-Check [my Github profile summary](https://github-profile-summary.com/user/dnshi), powered by [github-profile-summary](https://github.com/tipsy/github-profile-summary)
+Check [my Github profile summary](https://profile-summary-for-github.com/user/dnshi), powered by [github-profile-summary](https://github.com/tipsy/github-profile-summary)
 
 ### Dungeons & Developers
-As a fun way to assess, promote and learn the skills it takes to design and develop great web sites. You can access the [website](http://www.dungeonsanddevelopers.com/#_a2b2c2de2hi2jklm2noqx2y2_19_Dean Shi) to see my web development's level.
+As a fun way to assess, promote and learn the skills it takes to design and develop great web sites. You can access the [website](http://www.dungeonsanddevelopers.com/#_a2b2c2de3hi2jklm2nopqrsuvx2y2z_19_Dean) to see my web development's level.
 
 ### Old Personal Page
 I found my first personal web page hosted on our Acadia University server. This was almost the first try for HTML5 drag & drop feature and couple css3 styles. Click [HERE](http://falcon.acadiau.ca/~093997s/xiao_shi/) to access it!
