@@ -1,0 +1,104 @@
+html {width: 900px;margin: auto;}
+body {width:700px;margin:30px auto 0;background: #111111;cursor: default;}
+a {cursor: pointer;}
+section p {color: #0d5;font-size:20px;}
+iframe {display: none}
+hr {border-width: 0px;padding-bottom:10px;padding-top:10px;}
+table {width: 700px;}
+
+.serif {font-family:Times,serif;}
+.sansserif {font-family:Arial,Helvetica,sans-serif;}
+
+article p {text-align:justify;}
+section.table {display: none;}
+div.html-logo-bar {float:right;line-height:2em;}
+header, hr {margin-bottom:20px;border-bottom:5px solid #555;}
+h1.box_text {text-align:center;}
+h1.title {margin-top: 0px;font:bold 26px georgia,sans-serif;color: #fff;text-shadow:0 0 10px #fff, 0 0 20px #fff,0 0 30px #fff,0 0 40px #ff00de,0 0 70px #ff00de,0 0 80px #ff00de,0 0 100px #ff00de,0 0 150px #ff00de;}
+
+table td.draglist {background-image:url(botton.png);height:63px; text-align:center;color: #DDD;cursor: pointer;font-size: 20px;}
+table p, li, dl {color: #dd0;font-size:18px;margin-left: 20px;margin-right: 20px;font-weight: bold;}
+table p.small-size span, table p.small-size a, table span.small-size, article p span.small-size, dl.small-size span, dl.small-size a {font-size: 15px !important;}
+table a, span a {color: #35f;text-decoration: none;}
+table a:link, span a:link {color: #35f;}
+
+th, span.title {text-shadow: 1px 1px 5px #777;}
+th {color: #f00;font-size: 1.5em;padding: 15px 0;}
+
+ul.list {list-style-type: disc;padding:2px 10px;border:1px dashed #999;margin: 20px;line-height: 180%;}
+ul.list li {margin-right: 3px;}
+ul.list li.no-list-style {list-style-type:none; margin-left: 0px;}
+
+span.title {color: #24b74d;}
+span.high-light-blue, span.high-light-red, span.high-light-orange, span.high-light-yellow {color: #0af;font-size:18px;font-weight: bold;}
+span.high-light-red {color: #f39;}
+span.high-light-orange {color: orange;}
+span.high-light-yellow {color: #dd0;}
+span.float-right {float:right; font-size: 15px;}
+
+#arraylist {position:relative;width:200px;border:3px solid #4a6694; margin-left: 450px; overflow: hidden; box-shadow:0 0 128px #08c;}
+#copyright {padding-top: 0px;border-top:3px solid #0a0;color: #DDD;text-shadow: 0 0 20px #00f,0 0 30px #ffc;font-weight: bold;}
+#container {position:absolute;height: 250px;width:200px;color:#757575;padding:30px;border:7px dashed #757575;margin-left:20px;}
+#profileTable table:nth-of-type(2) td:first-of-type {width:350px;}
+#projectsTable p {text-align:justify;}
+#experienceTable ul {padding-left: 35px;}
+#skillsTable td:first-of-type {width: 238px;text-align: right;}
+#dropzone {box-shadow:0 0 128px #DDD;}
+#top-button {position: fixed; right: 700px;bottom: 32px;width: 95px; height: 102px;background-image: url(top.png);opacity: 0;float: right;display: none;}
+#top-button:hover {box-shadow:0 0 28px #aaa, 0 0 8px #ddd inset;}
+#version-info span {border: 1px dashed #fff;padding: 5px 10px;}
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+  .str { color: #080 }  /* string content */
+  .kwd { color: #008 }  /* a keyword */
+  .com { color: #800 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+div.code { padding: 2px; border: 1px solid #888; overflow-x:hidden; overflow-y:hidden; text-shadow:0 1px 0 #fff;position:relative; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {     
+  padding:0px 0px 0px 1px;
+  margin:0px;
+  border-left:50px solid rgb(200,200,200);
+  list-style-type:decimal;
+  color:#000;
+  font-family: 'Courier New', monospace;
+} 
+
+/* IE indents via margin-left */
+_ol.linenums {     
+  padding:0px 5px;
+  margin:0px;
+  border-left:40px solid rgb(200,200,200);
+  list-style-type:decimal;
+  color:#000;
+} /* IE indents via margin-left */
+ol.linenums li{margin:0px;padding:0;background:#F4F4F4;color:#000;}
+ol.linenums li:nth-of-type(even){background:#efefef;}

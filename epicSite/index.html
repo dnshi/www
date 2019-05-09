@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Xiao Shi(Dean)">
+    <meta name="description" content="Personal Info Web Page">
+    <title>Xiao Shi's WEB</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" />
+    <link rel="shortcut icon" href="acadia_crest.ico" type="image/x-icon" />
+    <script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body class="serif">
+    <!-- Header --> 
+    <header>
+        <div class="html-logo-bar">
+            <img alt="html5 logo" src="http://www.w3.org/html/logo/downloads/HTML5_Badge_32.png" style="float:right;"/>
+            <span class="high-light-orange" style="margin-right:10px;">HTML5 Logo by <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></span>
+        </div>
+        <h1 class="title">XIAO SHI'S WEB</h1>
+    </header><!-- Header End --> 
+    <!--  Main Content  -->
+    <section>
+        <p>
+            <strong>This is <span style="color: cyan">Xiao Shi (Dean)</span>. If you want to know who I am, <span style="color: #0af">drag any one</span> of the items from the arraylist to the drop box below, or <span style="color: hotpink">double click any one</span>!</strong>
+        </p>
+
+        <div class="dragDrop sansserif">
+            <!--  Drop Box Container  -->
+            <div id="container">
+                <img id="dropzone" src="DropZone.png" alt="Drop Zone" width="200" height="200" />
+                <h1 class="box_text">Drop Here!</h1>
+            </div>
+
+            <table id="arraylist">
+                <tr><td id="profile" class="draglist">Profile</td></tr> 
+                <tr><td id="skills" class="draglist">Skills</td></tr> 
+                <tr><td id="projects" class="draglist">Projects</td></tr> 
+                <tr><td id="experience" class="draglist">Experience</td></tr>
+                <tr><td id="about" class="draglist">About</td></tr>
+            </table>
+        </div>
+        <hr>
+    </section>
+
+    <section id="profileTable" class="table">
+        <table border>
+        <tr>
+            <th>My Information</th>
+            <th>Education</th>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">NAME:</span> XIAO SHI (DEAN)<br><br>
+                    <span class="title">ADDRESS:</span><br>188 Pleasant Street<br>Wolfville, NS, Canada<br><br>
+                    <span class="title">POST CODE:</span><br>B4P 1N2<br><br>
+                    <span class="title">PHONE NUMBER:</span><br>(902) 691-3208<br><br>
+                    <span class="title">EMAIL: </span>
+                    <a href="mailto:093997s@acadiau.ca">093997s@acadiau.ca</a>
+                </p>
+            </td>
+
+            <td>
+                <p>
+                    <span class="title">Bachelor of Computer Science (Co-op Option)</span><br>Acadia University, Wolfville, Nova Scotia
+                </p>
+            </td>
+        </tr>
+        </table>
+        <br>
+        <table border>
+        <tr>
+            <td>
+                <ul class="list">
+                    <li class="no-list-style">
+                        <span class="high-light-blue">Computer Science Courses: </span>
+                        <span class="high-light-red">[Major]</span>
+                    </li>
+                    <li>Analysis of Algorithms</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Automata</li>
+                    <li>C Programming</li>
+                    <li>Compiler/Translators</li>
+                    <li>Computer Architecture</li>
+                    <li>Computer Graphics</li>
+                    <li>Data Comm &amp; Comp Networks</li>
+                    <li>Data Structures</li>
+                    <li>Database Management System</li>
+                    <li>Game Design/Development</li>
+                    <li>Java Programming</li>
+                    <li>Operating Systems</li>
+                    <li>Software Engineering</li>
+                    <li>Web-Centric Programming</li>
+                </ul>
+            </td>
+
+            <td style="vertical-align: baseline;">
+                <ul class="list">
+                    <li class="no-list-style">
+                        <span class="high-light-blue">Mathematics Courses: </span>
+                        <span class="high-light-red">[Minor]</span>
+                    </li>
+                    <li>Calculus</li>
+                    <li>Discrete Mathematics</li>
+                    <li>Linear Algebra</li>
+                    <li>Statistics</li>
+                </ul>
+            </td>
+        </tr>
+        </table>
+    </section>
+
+    <section id="skillsTable" class="table">
+        <table border>
+        <tr>
+            <th>Header</th>
+
+            <th>Contents</th>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Programming Languages</span>
+                </p>
+            </td>
+
+            <td>
+                <p class="high-light-green">Java, C/C++, C#</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Web/Scripting Languages</span>
+                </p>
+            </td>
+
+            <td>
+                <p>PHP, HTML5, CSS3, JavaScript, JSP</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Web Server Components</span>
+                </p>
+            </td>
+
+            <td>
+                <p>Linux, Apache, MySQL, PHP <span class="high-light-blue float-right">[ L A M P ]</span></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Platforms</span>
+                </p>
+            </td>
+
+            <td>
+                <p>Windows, Unix, Linux</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Computer Technologies</span>
+                </p>
+            </td>
+
+            <td>
+                <ul class="list">
+                    <li>.NET Framework</li>
+                    <li>Common Gateway Interface (CGI)</li>
+                    <li>JavaFX</li>
+                    <li>JSON</li>
+                    <li>JQuery / JQuery UI</li>
+                    <li>OpenGL</li>
+                    <li>Servlet</li>
+                    <li>XML</li>
+                    <li>XModem</li>
+                    <li>UML Diagrams</li>
+                    <li>WPF</li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Programming Tools</span>
+                </p>
+            </td>
+
+            <td>
+                <ul class="list">
+                    <li>Visual Studio <span class="high-light-blue float-right">[Windows]</span></li>
+                    <li>Xcode <span class="high-light-blue float-right">[Mac OSX]</span></li>
+                    <li>Emacs <span class="high-light-blue float-right">[Linux]</span></li>
+                    <li>Eclipse / Spring Framework <span class="high-light-blue float-right">[Java JDK]</span></li>
+                    <li>Unity3D <span class="high-light-blue float-right">[3D Game Engine]</span></li>
+                    <li>JavaFX Scene Builder <span class="high-light-blue float-right">[Visual Layout Tool]</span></li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Other Softwares/Editors</span>
+                </p>
+            </td>
+
+            <td>
+                <ul class="list">
+                    <li>AutoCAD <span class="high-light-blue float-right">[Computer-Aided Design App]</span></li>
+                    <li>Solid Edge <span class="high-light-blue float-right">[3D CAD App]</span></li>
+                    <li><span class="high-light-red">Adobe</span> After Effects <span class="high-light-blue float-right">[Visual Effects Software]</span></li>
+                    <li><span class="high-light-red">Adobe</span> Audition <span class="high-light-blue float-right">[Audio Editor]</span></li>
+                    <li><span class="high-light-red">Adobe</span> Photoshop <span class="high-light-blue float-right">[Image Editor]</span></li>
+                    <li><span class="high-light-red">Adobe</span> Premiere <span class="high-light-blue float-right">[Video Editor]</span></li>
+                </ul>
+            </td>
+        </tr>
+        </table>
+    </section>
+
+    <section id="projectsTable" class="table">
+        <table border>
+        <tr>      
+            <th>Project List</th>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Survival Island, Game Development: </span><br>
+                </p>
+
+                <dl class="small-size">
+                    <dt><span class="high-light-red">Project Type: </span></dt>
+                    <dd><span class="high-light-blue">Individual Project</span></dd>
+                    <dt><span class="high-light-red">Genre: </span></dt>
+                    <dd><span class="high-light-blue">Role Playing Game (RPG)</span></dd>
+                    <dt><span class="high-light-red">Game Engine: </span></dt>
+                    <dd><span class="high-light-blue">Unity3D</span></dd>
+                    <dt><span class="high-light-red">Platform: </span></dt>
+                    <dd><span class="high-light-blue">Mac OSX, Windows &amp; Web</span></dd>
+                    <dt><span class="high-light-red">Demo: </span></dt>
+                    <dd><a href="http://falcon.acadiau.ca/~093997s/games/Island_Web.html" target="_blank">http://falcon.acadiau.ca/~093997s/games/Island_Web.html</a></dd>
+                </dl>
+
+                <p class="small-size">
+                    <span class="high-light-red">Project Description: </span><br><br>
+                    This project is based on a tutorial, which includes functions of the Unity3D and concepts of designing and developing a video game. The environment is the most successful part over this project, involving shaders, textures, skybox, hills, environmental sound, smoke/fire (Particle Effects), fog, 3D modelling and lights. <br><br>
+                    This game is cross-platform. It can be built on Windows, Mac and Web. C# is used as scripting language. Listener/Collider functions are widely implemented, for actions or plots are triggered if a player meets conditions such as the door opening automatically when a player collects all batteries and is close to the door.<br><br>
+                    <span class="high-light-red">Game Description: </span><br><br>
+                    Main character has awoken on a desert island, with only an active volcano and a mysterious cabin for company. The goal is to survive by lighting a fire to signal for help and keep warm. In order to light the fire the player must acquire the matches that are locked away in the cabin. To unlock the cabin the player must pick up several power cells to fuel the generator that powers the door to the cabin. This would be simple except that the final power cell is locked into a minigame requiring the player to knock down timed targets at a coconut shy shooting gallery—knock them all down simultaneously, and the player will win that all important final cell!
+                </p>
+
+                <p class="small-size">
+                    <span class="high-light-red">Key words: </span><span class="high-light-blue">Unity3D, Game Concepts, Graphics Design and C# Programming</span>
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Korosu, Game Development: </span><br>
+                </p>
+
+                <dl class="small-size">
+                    <dt><span class="high-light-red">Project Type: </span></dt>
+                    <dd><span class="high-light-blue">Group Project</span></dd>
+                    <dt><span class="high-light-red">Genre: </span></dt>
+                    <dd><span class="high-light-blue">First Person Shooter (FPS)</span></dd>
+                    <dt><span class="high-light-red">Players: </span></dt>
+                    <dd><span class="high-light-blue">Expected Players: 2-8 (Network Multi-player)</span></dd>
+                    <dt><span class="high-light-red">Game Engine: </span></dt>
+                    <dd><span class="high-light-blue">Unity3D</span></dd>
+                    <dt><span class="high-light-red">Platform: </span></dt>
+                    <dd><span class="high-light-blue">Mac OSX, Windows &amp; Web</span></dd>
+                    <dt><span class="high-light-red">Comment/Feedback: </span></dt>
+                    <dd>==> <a id='professor-feedback' href='korosuFeedback.png'>CLICK HERE!!</a> &lt;==</dd>
+                    <dt><span class="high-light-red">Demo: </span></dt>
+                    <dd><a href="http://falcon.acadiau.ca/~093997s/games/korosu.html" target="_blank">http://falcon.acadiau.ca/~093997s/games/korosu.html</a></dd>
+                </dl>
+
+                <p class="small-size">
+                    <span class="high-light-blue">[Note: if a player is host, then other players press "connect" button to join the game] </span><br><br><br>
+                    <span class="high-light-red">High Level Concept Statement: </span><br><br>
+                    To provide players with a fun, fast paced multi-player first person shooter experience. Also, if time allows, with a co-op survival mode.<br><br>
+                    <span class="high-light-red">Design Goals: </span><br><br>
+                    To have the player react quickly to their surroundings and other players in order to kill the other players as quickly and efficiently as possible while staying alive. This gives the player a sense of accomplishment by thinking strategically to outplay the other players.<br><br>
+                    <span class="high-light-red">Project Description: </span><br><br>
+                    Responsible for designing the environment of the game, programming the actions (listeners), testing the games and fixing bugs. Good communication and collaboration largely improve the efficiency.
+                </p>
+                
+                <p class="small-size">
+                    <span class="high-light-red">Key words: </span><span class="high-light-blue">Unity3D, Game Concepts, Graphics Design and C# Programming</span>
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">3D Maze, Computer Graphics: </span><br>
+                </p>
+
+                <p>
+                    Individual project, responsible for developing a maze and building it into a 3D model on Unix/Linux system by using C++ programming language and OpenGL. Maze is created randomly, so each time cells of maze are built differently<br><br>Programming abilities, understanding of OpenGL and algorithm of constructing a 3D maze with computing coordination play key roles in this project.
+                </p>
+
+                <p class="small-size">
+                    <span class="high-light-red">Key words: </span><span class="high-light-blue">OpenGL, Analysis of Algorithms and C++ Programming</span>
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Enigma, Java Programming 2: </span><br>
+                </p>
+
+                <p>
+                    In a team of 2, using Java, solely responsible for writing algorithms of an enigma machine to encipher texts into secret coded messages and decipher the messages into readable texts
+                </p>
+
+                <p class="small-size">
+                    <span class="high-light-red">Key words: </span><span class="high-light-blue">Analysis of Algorithms, Java Programming and Java GUI Design</span>
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Online Book Store, Software Engineering 1: </span>
+                </p>
+
+                <p>In a 2 member-project, solely responsible for writing an UML diagram, designing structures of this online book store and accomplishing tasks into Java codes. </p>
+                
+                <p class="small-size">
+                    <span class="high-light-red">Key words: </span><span class="high-light-blue">UML Diagrams and Java Programming</span>
+                </p>
+            </td>
+        </tr>
+        
+        </table>
+    </section>
+
+    <section id="experienceTable" class="table">
+        <table border>
+        <tr>       
+            <th>Work Experience</th>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Programmer, Novex Software Development Inc.</span><span class="high-light-blue float-right">May 2012 - August 2012</span>
+                </p>
+                <ul>
+                    <li>Learned and gained full understanding of serial communications protocols</li>
+                    <li>Created three-dimensional user interface using Unity3D (Game Engine)</li>
+                    <li>Implemented XModem in C and Java allowing handhelds to communicate with PCs</li>
+                    <li>Created messaging system on top of JMS</li>
+                </ul>
+                <p class="small-size">
+                    <span class="high-light-red small-size">Website: </span><a href="http://novexsoftware.com" class="small-size">http://novexsoftware.com</a>
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Teaching Assistant, Software Engineering 1</span><span class="high-light-blue float-right">January 2012 - April 2012</span>
+                </p>
+                <ul>
+                    <li>Taught UML technical concepts to students involved graphs and diagrams</li>
+                    <li>Used knowledge and good communication skills to answer students' questions</li>
+                    <li>Flexible and able to adapt when unexpected levels of work arise</li>
+                    <li>Use sound judgment to mark assignments fairly and impartially</li>
+                    <li>Punctual and trusted to keep marks confidential</li>
+                    <li>Effectively balance course load and demands of part-time role</li>
+                </ul>
+            </td>
+        </tr>
+        </table>
+        <br>
+        <table border>
+        <tr>       
+            <th>Volunteer Experience</th>
+        </tr>
+
+        <tr>
+            <td>
+                <p>
+                    <span class="title">Robot Programming Competition, Acadia University</span><span class="high-light-blue float-right">January 2011 &amp; 2012</span>
+                </p>
+                <ul>
+                    <li>Led teams to queuing area or judging rooms at the appointed times</li>
+                    <li>Worked under the direction of the Pit Manager, RPC Director, or coordinators as needed</li>
+                    <li>Kept program competition running smoothly</li>
+                </ul>
+            </td>
+        </tr>
+        </table>
+    </section>
+
+    <section id="aboutTable" class="table">
+        <div class="code">
+            <ol class="linenums">
+                <li class="L0"><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span></li>
+                <li class="L1"><span class="pln">&nbsp;</span></li>
+                <li class="L2"><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span></li>
+                <li class="L3"><span class="pun">{</span></li>
+                <li class="L4"><span class="pln">&emsp;&nbsp;&nbsp;printf</span><span class="pun">(</span><span class="str">"Hello World!"</span><span class="pun">);</span></li>
+                <li class="L5"><span class="pln">&emsp;&nbsp;&nbsp;printf</span><span class="pun">(</span><span class="str">"\rOops!!!!!!!!"</span><span class="pun">);</span></li>
+                <li class="L6"><span class="pln">&emsp;&nbsp;&nbsp;printf</span><span class="pun">(</span><span class="str">"\rHello Guest!"</span><span class="pun">);</span></li>
+                <li class="L7"><span class="pln">&emsp;&nbsp;&nbsp;</span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li>
+                <li class="L8"><span class="pun">}</span></li>
+            </ol>
+        </div>
+
+        <article>
+            <p>My name is Xiao Shi (Dean) and I am a 4th year student in the Jodrey School of Computer Science at Acadia University. My primary interests are <span class="high-light-yellow">Software and Web development</span> and secondary interest is Programming <span class="high-light-yellow">3D games</span>.</p>
+            <p>Building this web page took me a month and the technologies used in the page were <span class="high-light-blue">HTML5, CSS3, JavaScript, JQuery, JQuery UI and Fancybox</span>. I would keep updating it and this page would be the best place to reveal myself! :D</p>
+            <p id="version-info" style="text-align:right;"><span class="high-light-red small-size">Last Update: August 29th, 2012</span></p>
+        </article>
+    </section><!-- Main Content End -->
+
+    <!-- Footer -->
+    <footer>
+        <div style="float: right;" >
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" />
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0" src="css.gif" alt="Valid CSS!" />
+            </a>
+            <a style="cursor: default">
+                <img style="border:0" src="button-utf8.gif" alt="UTF-8" />
+            </a>
+        </div>
+        <p>
+            <small id="copyright">Copyright &copy; 2012 SxDN. HTML5 + CSS3 + JavaScript.</small>
+        </p>
+        <a href="javascript:void(0)" id="top-button"></a>
+    </footer><!-- Footer End -->
+</body>
+</html>
