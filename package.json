@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "http-server ./dist",
-    "build": "gulp",
-    "deploy": "./build/deploy.sh"
+    "build": "npm run clean && gulp",
+    "clean": "rm -r ./dist"
   },
   "license": "MIT",
   "repository": {
@@ -19,7 +19,6 @@
     "url": "https://github.com/dnshi/www"
   },
   "devDependencies": {
-    "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-ejs": "^3.1.3",
