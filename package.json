@@ -11,7 +11,7 @@
   "scripts": {
     "start": "http-server ./dist",
     "build": "npm run clean && gulp",
-    "clean": "rm -r ./dist"
+    "clean": "rm -rf ./dist"
   },
   "license": "MIT",
   "repository": {
