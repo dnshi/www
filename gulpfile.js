@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const ejs = require('gulp-ejs')
+const rename = require('gulp-rename')
 const stylus = require('gulp-stylus')
 const htmlmin = require('gulp-htmlmin')
 const autoprefixer = require('gulp-autoprefixer')
@@ -17,9 +18,8 @@ const readFileAsync = promisify(readFile)
 async function runEJS() {
   config.css = await readFileAsync('./dist/static/main.css', 'utf8')
   return gulp.src('./src/index.ejs')
-    .pipe(ejs(config, {}, {
-      ext: '.html'
-    }))
+    .pipe(ejs(config))
+    .pipe(rename({ extname: '.html' }))
     .pipe(htmlmin({
       removeComments: true,
       collapseWhitespace: true,
