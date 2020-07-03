@@ -2,7 +2,6 @@ const gulp = require('gulp')
 const ejs = require('gulp-ejs')
 const stylus = require('gulp-stylus')
 const htmlmin = require('gulp-htmlmin')
-const autoprefixer = require('gulp-autoprefixer')
 const {
   readFile
 } = require('fs')
@@ -31,9 +30,6 @@ function runStylus() {
   return gulp.src('./src/main.styl')
     .pipe(stylus({
       compress: true
-    }))
-    .pipe(autoprefixer({
-      cascade: false
     }))
     .pipe(gulp.dest('./dist/static'))
 }

@@ -50,9 +50,15 @@
   },
 
   "exp": [{
+    "company": "Microsoft",
+    "location": "Vancouver, BC",
+    "period": "Jul 2020 - Present",
+    "occupation": "Software Development Engineer 2",
+    "description": "Power BI"
+  }, {
     "company": "Amazon",
     "location": "Vancouver, BC",
-    "period": "Sept 2018 - Present",
+    "period": "Sept 2018 - Jul 2020",
     "occupation": "Web Development Engineer",
     "description": "Web Development / Product Deployment / System Operations / Product Owner"
   }, {
