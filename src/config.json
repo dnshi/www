@@ -17,7 +17,7 @@
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/icon.min.css",
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/progress.min.css",
     "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/segment.min.css",
-    "//cdn.rawgit.com/konpa/devicon/89f2f44ba07ea3fff7e561c2142813b278c2d6c6/devicon.min.css"
+    "//cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"
   ],
   "info": {
     "name": "<span style=\"font-size:1rem;color:#5DFF8A\">var</span> Dean Shi",
@@ -52,19 +52,19 @@
   "exp": [{
     "company": "Microsoft",
     "location": "Vancouver, BC",
-    "period": "Jul 2020 - Present",
+    "period": "2020 - Present",
     "occupation": "Software Engineer 2",
     "description": "Power BI + Microsoft News Content Services"
   }, {
     "company": "Amazon",
     "location": "Vancouver, BC",
-    "period": "Sept 2018 - Jul 2020",
+    "period": "2018 - 2020",
     "occupation": "Web Development Engineer",
-    "description": "Web Development / Product Deployment / System Operations / Product Owner"
+    "description": "Web Development + Product Deployment + System Operations"
   }, {
     "company": "7Geese",
     "location": "Vancouver, BC",
-    "period": "Mar 2018 - Sept 2018",
+    "period": "2018 - 2018",
     "occupation": "Software Developer",
     "description": "70% Frontend developer + 30% Product designer. Influenced both development team and product design team and made strategic planning which dove deeply on customers' requirements and covered long-term thinking of business value."
   }, {
@@ -82,13 +82,13 @@
   }, {
     "company": "Electronic Arts",
     "location": "Burnaby, BC",
-    "period": "Jan 2013 - Aug 2013",
+    "period": "2013 - 2013",
     "occupation": "Associate Software Engineer",
     "description": "Worked on FIFA Online Services team (FIFA 14), and participated in the full cycle of developing a video game. Java was used most frequently, and I had one month working at Load Test team to write test scripts for the online services"
   }, {
     "company": "Novex Software",
     "location": "New Minas, NS",
-    "period": "May 2012 - Aug 2012",
+    "period": "2012 - 2012",
     "occupation": "Software Developer",
     "description": "Understood serial communications protocols between a device (client) to a server, and implemented in C and Java to control data transmission."
   }],
@@ -102,34 +102,16 @@
   }],
 
   "skills": [{
-    "name": "<i class=\"devicon-html5-plain\"></i> HTML5 & <i class=\"devicon-css3-plain\"></i> CSS3 / <i class=\"devicon-less-plain-wordmark\" style=\"font-size: 2rem;position: absolute;margin-top: -5px;\"></i> <span style=\"opacity:0\">LESS</span>",
-    "percent": 96
+    "name": "<i class=\"devicon-javascript-plain\"></i> JavaScript & <i class=\"devicon-typescript-plain\"></i> TypeScript",
+    "percent": 99
   }, {
-    "name": "<i class=\"devicon-javascript-plain\"></i> JavaScript (ES5 / ES6 / ES7)",
-    "percent": 93
-  }, {
-    "name": "<i class=\"devicon-angularjs-plain\"></i> AngularJS / <i class=\"devicon-react-original\"></i> ReactJS",
-    "percent": 88
+    "name": "<i class=\"devicon-react-original\"></i> ReactJS & <i class=\"devicon-redux-original\"></i> Redux",
+    "percent": 95
   }, {
     "name": "<i class=\"devicon-nodejs-plain\"></i> NodeJS",
     "percent": 85
   }, {
-    "name": "<i class=\"devicon-gulp-plain\"></i> Gulp / <i class=\"devicon-grunt-plain\"></i> Grunt",
-    "percent": 84
-  }, {
-    "name": "<i class=\"devicon-java-plain\"></i> Java",
-    "percent": 78
-  }, {
-    "name": "<i class=\"devicon-apple-original\"></i> Unix / <i class=\"devicon-linux-plain\"></i> Linux",
-    "percent": 74
-  }, {
-    "name": "<i class=\"devicon-git-plain\"></i></i> Git",
-    "percent": 74
-  }, {
-    "name": "<i class=\"devicon-mysql-plain\"></i> MySQL / <i class=\"devicon-mongodb-plain\"></i> MongoDB",
-    "percent": 70
-  }, {
-    "name": "<i class=\"devicon-go-plain\"></i> GoLang / <i class=\"devicon-docker-plain\"></i> Docker",
-    "percent": 68
+    "name": "<i class=\"devicon-webpack-plain\"></i> Webpack",
+    "percent": 80
   }]
 }
