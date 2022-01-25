@@ -78,7 +78,7 @@
       <% for (var i in info.labels) { %>
         <div id="<%= info.labels[i].id %>" class="item">
           <% if (info.labels[i].name && info.labels[i].icon) { %>
-          <a href="<%= info.labels[i].url %>" class="ui inverted basic <%= info.labels[i].color %> button">
+          <a href="<%= info.labels[i].url %>" class="ui inverted basic <%= info.labels[i].color %> button" onclick="amplitude.getInstance().logEvent('<%= info.labels[i].name %>');">
             <i class="<%= info.labels[i].icon %> icon"></i><%= info.labels[i].name %></a>
           <% } %>
         </div>
