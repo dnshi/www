@@ -50,11 +50,17 @@
   },
 
   "exp": [{
+    "company": "Amplitude",
+    "location": "Vancouver, BC",
+    "period": "2022 - Present",
+    "occupation": "Senior Software Engineer",
+    "description": "Building Amplitude SDKs"
+  }, {
     "company": "Microsoft",
     "location": "Vancouver, BC",
-    "period": "2020 - Present",
+    "period": "2020 - 2022",
     "occupation": "Software Engineer 2",
-    "description": "Power BI + Microsoft News Content Services"
+    "description": "Power BI + Microsoft News Content Services - Core member of the MSN Homepage development"
   }, {
     "company": "Amazon",
     "location": "Vancouver, BC",
@@ -78,19 +84,19 @@
     "location": "Vancouver, BC",
     "period": "2014 - 2015",
     "occupation": "Software Engineer",
-    "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on our core product. Also designed and implemented the infrastructure of the frontend project in JavaScript. "
+    "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on the core product to benefit development experience and improve product's maintainability."
   }, {
     "company": "Electronic Arts",
     "location": "Burnaby, BC",
     "period": "2013 - 2013",
     "occupation": "Associate Software Engineer",
-    "description": "Worked on FIFA Online Services team (FIFA 14), and participated in the full cycle of developing a video game. Java was used most frequently, and I had one month working at Load Test team to write test scripts for the online services"
+    "description": "Worked on FIFA Online Services team (FIFA 14), and participated in the full cycle of a video game development."
   }, {
     "company": "Novex Software",
     "location": "New Minas, NS",
     "period": "2012 - 2012",
     "occupation": "Software Developer",
-    "description": "Understood serial communications protocols between a device (client) to a server, and implemented in C and Java to control data transmission."
+    "description": "Bridged serial communications protocols between a device (client) to a server, and implemented control data transmission by C and Java."
   }],
 
   "edu": [{
