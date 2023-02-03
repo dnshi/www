@@ -1,9 +1,9 @@
 {
-  "title": "Dean Shi - Software Engineer",
+  "title": "Dean Shi - Senior Software Engineer",
   "meta": {
     "author": "Dean Shi",
-    "description": "Dean Shi is a Senior Software Engineer at Amplitude and he is a code addict. His area is mainly on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing workflow. ",
-    "keywords": "Dean Shi, Software Engineer, Amazon, Vancouver, Web, Frontend, JavaScript, Acadia University",
+    "description": "Dean Shi is a Senior Software Engineer at Amplitude. His area is mainly on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing workflow.",
+    "keywords": "Dean Shi, Software Engineer, Developer, Amplitude, Microsoft, Amazon, Vancouver, Web, Frontend, JavaScript, Acadia University",
     "copyright": "DN",
     "language": "EN"
   },
@@ -20,8 +20,8 @@
     "//cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"
   ],
   "info": {
-    "name": "<span style=\"font-size:1rem;color:#5DFF8A\">var</span> Dean Shi",
-    "title": "= Software Engineer & Code Addict",
+    "name": "<span style=\"font-size:1rem;color:#5DFF8A\">const</span> Dean Shi",
+    "title": "= Senior Software Engineer",
     "email": {
       "user": "im",
       "host": "deanshi.com"
