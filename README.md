@@ -1,5 +1,4 @@
 # DEAN'S PERSONAL PAGE
-[![Build Status](https://travis-ci.org/dnshi/www.svg?branch=master)](https://travis-ci.org/dnshi/www)
 [![GitHub license](https://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/313cf600-915b-4cf8-a9b8-a073bdfbf2ed/deploy-status)](https://app.netlify.com/sites/deanshi/deploys)
 
