@@ -31,7 +31,7 @@ Looks like this site is no longer available 🙁
 Check [my Github profile summary](https://profile-summary-for-github.com/user/dnshi), powered by [github-profile-summary](https://github.com/tipsy/github-profile-summary)
 
 ### Dungeons & Developers
-As a fun way to assess, promote and learn the skills it takes to design and develop great web sites. You can access the [website](http://www.dungeonsanddevelopers.com/#_a2b2c2de3hi2jklm2nopqrs2tuvwx2y2z_19_Dean) to see my web development's level.
+As a fun way to assess, promote and learn the skills it takes to design and develop great web sites. You can access the [website](http://www.dungeonsanddevelopers.com/#_a2b2c2de3fghi2jklm2n2opqr2s2tuvwx2y2z_19_Dean) to see my web development's level.
 
 ### Old Personal Page
 Updated at 2019/05/08: Glad I added it back🎉🎉 Click [HERE](https://epic.deanshi.com/)
