@@ -23,6 +23,6 @@
     "gulp-ejs": "^5.1.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-stylus": "^2.7.0",
-    "http-server": "^0.12.3"
+    "http-server": "^14.1.1"
   }
 }
