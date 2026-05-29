@@ -7,7 +7,6 @@
   --bg:        #06080e;
   --bg-2:      #0a0e18;
   --surface:   #0f1626;
-  --surface-2: #131c30;
   --line:      rgba(150, 180, 230, 0.12);
   --line-soft: rgba(150, 180, 230, 0.07);
 
@@ -19,11 +18,9 @@
   --aqua:   #38e8ff;
   --blue:   #7aa2ff;
   --coral:  #ff7d8c;
-  --gold:   #ffd166;
 
   --accent: var(--mint);
 
-  --glow-mint: 0 0 0 1px rgba(94, 242, 201, 0.4), 0 0 24px rgba(94, 242, 201, 0.25);
   --shadow:   0 24px 60px -28px rgba(0, 0, 0, 0.9);
   --radius:   18px;
 
@@ -54,7 +51,7 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, p { margin: 0; }
 a { color: inherit; text-decoration: none; }
 
 :focus-visible {
@@ -109,8 +106,8 @@ a { color: inherit; text-decoration: none; }
   z-index: 90;
   transform: scaleX(var(--p, 0));
   transform-origin: left;
-  background: linear-gradient(90deg, var(--mint), var(--aqua), var(--blue));
-  box-shadow: 0 0 14px rgba(94, 242, 201, 0.7);
+  background: linear-gradient(90deg, var(--accent), var(--aqua), var(--blue));
+  box-shadow: 0 0 14px color-mix(in oklab, var(--accent) 70%, transparent);
 }
 
 /* ---- Shared layout ----------------------------------------- */
@@ -130,14 +127,14 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--mint);
+  color: var(--accent);
 }
 .eyebrow::before {
   content: "";
   width: 8px; height: 8px;
   border-radius: 2px;
-  background: var(--mint);
-  box-shadow: 0 0 10px var(--mint);
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
   animation: blink 2.4s steps(1) infinite;
 }
 
@@ -231,8 +228,8 @@ a { color: inherit; text-decoration: none; }
 .status .dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: var(--mint);
-  box-shadow: 0 0 0 0 rgba(94, 242, 201, 0.6);
+  background: var(--accent);
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 60%, transparent);
   animation: pulse 2.6s ease-out infinite;
 }
 .status time { color: var(--text); font-variant-numeric: tabular-nums; }
@@ -251,8 +248,8 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   margin-bottom: 22px;
 }
-.kicker .rule { flex: 0 0 46px; height: 1px; background: var(--mint); box-shadow: 0 0 8px var(--mint); }
-.kicker b { color: var(--mint); font-weight: 500; }
+.kicker .rule { flex: 0 0 46px; height: 1px; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+.kicker b { color: var(--accent); font-weight: 500; }
 
 .title {
   font-size: clamp(3.4rem, 14vw, 11rem);

@@ -76,7 +76,7 @@
         <span class="line"><span class="word">Dean</span></span>
         <span class="line"><span class="word accent">Shi</span></span>
       </h1>
-      <p class="lede">Senior frontend &amp; platform engineer with <b>13+ years</b> turning fuzzy ideas into fast, durable interfaces — <b>micro-frontend architecture</b>, <b>SDK development</b>, and high-traffic web platforms at Amplitude, Microsoft, and Amazon.</p>
+      <p class="lede">Senior frontend &amp; platform engineer with <b>13+ years</b> turning fuzzy ideas into fast, durable interfaces — specialising in <b>high-traffic web platforms</b>, <b>micro-frontend architecture</b>, and SDK development at Amplitude, Microsoft, and Amazon.</p>
 
       <nav class="actions" aria-label="Contact links">
         <% for (var i in info.labels) { var L = info.labels[i]; %>
@@ -131,7 +131,7 @@
         <span class="index">// <%= exp.length %> stops · <%= firstYear %> → now</span>
       </div>
 
-      <div class="timeline" data-tilt-group>
+      <div class="timeline">
         <% for (var i in exp) { %>
         <article class="role" data-tilt style="--brand:<%= exp[i].color %>">
           <span class="node" aria-hidden="true"></span>
@@ -182,7 +182,7 @@
           <% } %>
         </div>
 
-        <div class="stats" data-tilt-group>
+        <div class="stats">
           <div class="stat" data-tilt>
             <div class="num"><span data-count="<%= yearsBuilding %>">0</span><span class="suffix">+</span></div>
             <div class="label">Years building for the browser</div>
@@ -276,7 +276,6 @@
     var link = document.getElementById('email-link');
     link.textContent = addr;
     link.href = 'mailto:' + addr;
-    document.getElementById('email-chip').setAttribute('href', '#contact');
 
     /* ---- live Vancouver clock ---- */
     var clock = document.getElementById('clock');
@@ -366,15 +365,17 @@
     }
 
     /* ---- starfield: mouse-reactive constellation ---- */
+    var stars = [], starDpr = 1, starW = 0, starH = 0;
     (function () {
       var canvas = document.getElementById('starfield');
       var ctx = canvas.getContext('2d');
-      var w, h, dpr, stars = [], mouse = { x: -999, y: -999 };
+      var w, h, dpr, mouse = { x: -999, y: -999 };
 
       function resize() {
         dpr = Math.min(window.devicePixelRatio || 1, 2);
         w = canvas.width = innerWidth * dpr;
         h = canvas.height = innerHeight * dpr;
+        starDpr = dpr; starW = w; starH = h;
         canvas.style.width = innerWidth + 'px';
         canvas.style.height = innerHeight + 'px';
         var count = Math.min(110, Math.floor(innerWidth * innerHeight / 14000));
@@ -393,7 +394,7 @@
       window.addEventListener('pointermove', function (e) { mouse.x = e.clientX * dpr; mouse.y = e.clientY * dpr; }, { passive: true });
       window.addEventListener('pointerleave', function () { mouse.x = mouse.y = -999; });
 
-      var LINK = 130 * (window.devicePixelRatio || 1);
+      var LINK = 130 * dpr;
       function frame() {
         ctx.clearRect(0, 0, w, h);
         for (var i = 0; i < stars.length; i++) {
@@ -441,16 +442,60 @@
     console.log('%c👋 Hey, you opened the console.', 'color:#5ef2c9;font-size:14px;font-weight:700');
     console.log('%cBuilt by hand — vanilla JS, no framework. Say hi: ' + addr, 'color:#7aa2ff');
 
-    /* ---- konami easter egg: warp the starfield ---- */
-    var seq = [38,38,40,40,37,39,37,39,66,65], idx = 0;
+    /* ---- konami easter egg: warp drive ---- */
+    var konamiSeq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+    var konamiIdx = 0, turboActive = false;
     window.addEventListener('keydown', function (e) {
-      idx = (e.keyCode === seq[idx]) ? idx + 1 : 0;
-      if (idx === seq.length) {
-        idx = 0;
-        document.querySelectorAll('.ticker-track').forEach(function (t) { t.style.animationDuration = '4s'; });
-        docEl.style.setProperty('--accent', '#ff7d8c');
-        console.log('%c⚡ turbo engaged', 'color:#ff7d8c;font-weight:700');
+      konamiIdx = (e.key === konamiSeq[konamiIdx]) ? konamiIdx + 1 : 0;
+      if (konamiIdx < konamiSeq.length) return;
+      konamiIdx = 0;
+      if (turboActive) return;
+      turboActive = true;
+
+      /* 1. accent colour → coral */
+      docEl.style.setProperty('--accent', '#ff7d8c');
+
+      /* 2. ticker goes ludicrous speed */
+      document.querySelectorAll('.ticker-track').forEach(function (t) { t.style.animationDuration = '3s'; });
+
+      /* 3. stars warp — radial stretch outward for 1.2s */
+      var warpStart = null;
+      var warpSpeed = 18;
+      function warpFrame(ts) {
+        if (!warpStart) warpStart = ts;
+        var p = Math.min(1, (ts - warpStart) / 1200);
+        var ease = 1 - Math.pow(1 - p, 3);
+        var currentSpeed = warpSpeed * (1 - ease) + 1;
+        for (var i = 0; i < stars.length; i++) {
+          var s = stars[i];
+          var nx = s.x - starW / 2, ny = s.y - starH / 2;
+          var len = Math.sqrt(nx * nx + ny * ny) || 1;
+          s.x += (nx / len) * currentSpeed * starDpr;
+          s.y += (ny / len) * currentSpeed * starDpr;
+          if (s.x < 0 || s.x > starW) s.x = starW / 2;
+          if (s.y < 0 || s.y > starH) s.y = starH / 2;
+        }
+        if (p < 1) requestAnimationFrame(warpFrame);
       }
+      requestAnimationFrame(warpFrame);
+
+      /* 4. screen flash + shake */
+      var flash = document.createElement('div');
+      flash.style.cssText = 'position:fixed;inset:0;z-index:999;pointer-events:none;background:rgba(255,125,140,0.18);transition:opacity 0.5s';
+      document.body.appendChild(flash);
+      requestAnimationFrame(function () { flash.style.opacity = '0'; });
+      setTimeout(function () { flash.remove(); }, 600);
+
+      docEl.style.transition = 'transform 0.05s';
+      var shakes = 0;
+      var shakeInterval = setInterval(function () {
+        var x = (Math.random() - 0.5) * 8, y = (Math.random() - 0.5) * 8;
+        docEl.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+        if (++shakes > 8) { clearInterval(shakeInterval); docEl.style.transform = ''; docEl.style.transition = ''; }
+      }, 50);
+
+      console.log('%c⚡ warp drive engaged', 'color:#ff7d8c;font-size:14px;font-weight:700');
+      console.log('%cYou know your Konami Code. Respect.', 'color:#7aa2ff');
     });
   })();
   </script>
