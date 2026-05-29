@@ -1,4 +1,4 @@
-const { mkdir, readFile, writeFile } = require('fs/promises')
+const { mkdir, readFile, writeFile, copyFile } = require('fs/promises')
 const path = require('path')
 const ejs = require('ejs')
 const config = require('../src/config.json')
@@ -18,7 +18,10 @@ async function build() {
   })
 
   await mkdir(dist, { recursive: true })
-  await writeFile(path.join(dist, 'index.html'), html)
+  await Promise.all([
+    writeFile(path.join(dist, 'index.html'), html),
+    copyFile(path.join(root, 'src/og.svg'), path.join(dist, 'og.svg'))
+  ])
 }
 
 build().catch((error) => {

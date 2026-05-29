@@ -10,14 +10,19 @@
   <title><%= title %></title>
   <link rel="canonical" href="https://deanshi.com/">
   <meta name="theme-color" content="#06080e">
+  <meta name="robots" content="index, follow">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://deanshi.com/">
   <meta property="og:title" content="<%= title %>">
   <meta property="og:description" content="<%= meta.description %>">
+  <meta property="og:image" content="https://deanshi.com/og.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Dean Shi">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= title %>">
   <meta name="twitter:description" content="<%= meta.description %>">
+  <meta name="twitter:image" content="https://deanshi.com/og.svg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2306080e'/%3E%3Cpath d='M9 22V10h5a6 6 0 0 1 0 12H9z' fill='none' stroke='%235ef2c9' stroke-width='2.4'/%3E%3C/svg%3E" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +81,7 @@
         <span class="line"><span class="word">Dean</span></span>
         <span class="line"><span class="word accent">Shi</span></span>
       </h1>
-      <p class="lede">Senior frontend &amp; platform engineer with <b>13+ years</b> turning fuzzy ideas into fast, durable interfaces — specialising in <b>high-traffic web platforms</b>, <b>micro-frontend architecture</b>, and SDK development at Amplitude, Microsoft, and Amazon.</p>
+      <p class="lede">Senior frontend &amp; platform engineer with <b>13+ years</b> turning fuzzy ideas into fast, durable interfaces — specialising in <b>high-traffic web platforms</b>, <b>micro-frontend architecture</b>, and <b>CSS architecture &amp; web performance</b> at Amplitude, Microsoft, and Amazon.</p>
 
       <nav class="actions" aria-label="Contact links">
         <% for (var i in info.labels) { var L = info.labels[i]; %>
@@ -86,17 +91,17 @@
             <span>Email me</span>
           </a>
           <% } else if (L.id === 'github') { %>
-          <a class="chip" href="<%= L.url %>" target="_blank" rel="noopener" aria-label="GitHub">
+          <a class="chip" href="<%= L.url %>" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 8.8 21.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.4-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.6.9.6 1.8v2.7c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
             <span>GitHub</span>
           </a>
           <% } else if (L.id === 'linkedin') { %>
-          <a class="chip" href="<%= L.url %>" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <a class="chip" href="<%= L.url %>" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8h4V24h-4V8Zm7 0h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4 0 4.8 2.7 4.8 6.1V24h-4v-7c0-1.7 0-3.8-2.3-3.8s-2.7 1.8-2.7 3.7V24h-4V8Z"/></svg>
             <span>LinkedIn</span>
           </a>
           <% } else if (L.id === 'location') { %>
-          <a class="chip" href="<%= L.url %>" target="_blank" rel="noopener" aria-label="Location">
+          <a class="chip" href="<%= L.url %>" target="_blank" rel="noopener noreferrer" aria-label="Location">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span><%= L.name %> <span class="muted">↗</span></span>
           </a>
@@ -256,8 +261,8 @@
       <div class="foot-bar">
         <span>© 2015–<span id="year2"></span> Dean Shi · Vancouver, BC</span>
         <span class="links">
-          <a href="https://github.com/dnshi" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://ca.linkedin.com/in/deanshi" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/dnshi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://ca.linkedin.com/in/deanshi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </span>
       </div>
     </div>
