@@ -8,11 +8,46 @@
   <meta name="<%= key %>" content="<%= meta[key] %>">
   <% } %>
   <title><%= title %></title>
-  <link href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="https://deanshi.com/">
+  <meta name="theme-color" content="#21134b">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://deanshi.com/">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%= meta.description %>">
+  <meta property="og:site_name" content="Dean Shi">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%= meta.description %>">
+  <link href="data:image/x-icon;base64,R0lGODlhEAAQAPECAFFUV////wAAAAAAACH5BAkyAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAEBAQEBAAAAAAEBAAAAAAABAQEBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAh+QQJMgACACwAAAAAEAAQAAAC5wQAAAAAAAAAAAAAAAAAAAAAAAAAQBAAAAAAAAAAAAAAQBAEAAAAAAAAAAAAAAAQCAQAAAAAAAAAAAAAAAAIBAIAAAAAAAAAAAAAAAAEAgEAAAAAAAAAAAAAAAACgQAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAQEBAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAA7" rel="icon" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <% for (var link of links) { %>
   <link rel="stylesheet" href="<%= link %>">
   <% } %>
   <style><%- css %></style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dean Shi",
+    "jobTitle": "Senior Software Engineer",
+    "url": "https://deanshi.com/",
+    "email": "mailto:<%= info.email.user %>@<%= info.email.host %>",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vancouver",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "sameAs": [
+      "https://github.com/dnshi",
+      "https://ca.linkedin.com/in/deanshi"
+    ],
+    "knowsAbout": ["JavaScript", "TypeScript", "React", "Node.js", "Front-end infrastructure", "Web development"]
+  }
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63432844-1"></script>
   <script>
@@ -30,7 +65,7 @@
   })(window,document,'script','dataLayer','GTM-NVWPWR4');</script>
   <!-- End Google Tag Manager -->
   <script type="text/javascript">
-    !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:[]};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<g.length;t++)o(e,g[t],!1);for(var r=0;r<m.length;r++)o(e,m[r],!0)};r.invoked=!0;var u=t.createElement("script");u.type="text/javascript",u.integrity="sha384-GHWzi7MsT/TD3t0f+KUaVeuvPUsuVgdUKegrAWlzO4I83+klmUJna8WTuUunlsg6",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-1.6.6-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);for(var c=function(){return this._q=[],this},l=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],p=0;p<l.length;p++)n(c,l[p]);r.Identify=c;for(var d=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(d,v[f]);r.Revenue=d;var g=["getDeviceId","setDeviceId","getSessionId","setSessionId","getUserId","setUserId","setOptOut","setTransport","reset"],m=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(){var e=r._iq.push({_q:[]})-1;return i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
+    !function(){"use strict";!function(e,t){var r=e.amplitude||{_q:[],_iq:[]};if(r.invoked)e.console&&console.error&&console.error("Amplitude snippet has been loaded.");else{var n=function(e,t){e.prototype[t]=function(){return this._q.push({name:t,args:Array.prototype.slice.call(arguments,0)}),this}},s=function(e,t,r){return function(n){e._q.push({name:t,args:Array.prototype.slice.call(r,0),resolve:n})}},o=function(e,t,r){e[t]=function(){if(r)return{promise:new Promise(s(e,t,Array.prototype.slice.call(arguments)))}}},i=function(e){for(var t=0;t<g.length;t++)o(e,g[t],!1);for(var r=0;r<m.length;r++)o(e,m[r],!0)};r.invoked=!0;var u=t.createElement("script");u.type="text/javascript",u.integrity="sha384-GHWzi7MsT/TD3t0f+KUaVeuvPUsuVgdUKegrAWlzO4I83+klmUJna8WTuUunlsg6",u.crossOrigin="anonymous",u.async=!0,u.src="https://cdn.amplitude.com/libs/analytics-browser-1.6.6-min.js.gz",u.onload=function(){e.amplitude.runQueuedFunctions||console.log("[Amplitude] Error: could not load SDK")};var a=t.getElementsByTagName("script")[0];a.parentNode.insertBefore(u,a);for(var c=function(){return this._q=[],this},l=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove","getUserProperties"],p=0;p<l.length;p++)n(c,l[p]);r.Identify=c;for(var d=function(){return this._q=[],this},v=["getEventProperties","setProductId","setQuantity","setPrice","setRevenue","setRevenueType","setEventProperties"],f=0;f<v.length;f++)n(d,v[f]);r.Revenue=d;var g=["getDeviceId","setDeviceId","getSessionId","setSessionId","setUserId","setUserId","setOptOut","setTransport","reset"],m=["init","add","remove","track","logEvent","identify","groupIdentify","setGroup","revenue","flush"];i(r),r.createInstance=function(){var e=r._iq.push({_q:[]})-1;return i(r._iq[e]),r._iq[e]},e.amplitude=r}}(window,document)}();
 
     amplitude.init('5f17cef2c4b31655abdfa62fde33bcff')
   </script>
@@ -42,157 +77,137 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Container -->
-  <main class="ui stackable two column grid">
-    <!-- Left Panel -->
-    <aside class="center aligned six wide column">
-      <h1 class="ui header">
-        <%- info.name %>
-        <div class="sub header"><%= info.title %></div>
-      </h1>
-      <div class="ui horizontal list social">
+  <main class="game-shell">
+    <section class="stage" aria-labelledby="player-name">
+      <div class="sky-grid" aria-hidden="true"></div>
+      <div class="player-card">
+        <div class="portrait" aria-hidden="true">
+          <div class="avatar">
+            <span class="avatar-face"></span>
+            <span class="avatar-glasses"></span>
+            <span class="avatar-hair"></span>
+          </div>
+          <div class="level-badge">LV. 12</div>
+        </div>
 
-      <!-- Render Labels -->
-      <% for (var i in info.labels) { %>
-        <div id="<%= info.labels[i].id %>" class="item">
-          <% if (info.labels[i].name && info.labels[i].icon) { %>
-          <a href="<%= info.labels[i].url %>" class="ui inverted basic <%= info.labels[i].color %> button" onclick="amplitude.getInstance().logEvent('<%= info.labels[i].name %>');">
-            <i class="<%= info.labels[i].icon %> icon"></i><%= info.labels[i].name %></a>
+        <div class="player-copy">
+          <p class="screen-label">Character unlocked</p>
+          <h1 id="player-name">Dean Shi</h1>
+          <p class="class-line">Class: Senior Software Engineer</p>
+          <p class="bio-line">Builds browser products, front-end infrastructure, back-end logic, and the odd workflow power-up.</p>
+        </div>
+
+        <div class="quick-actions" aria-label="Contact links">
+          <% for (var i in info.labels) { %>
+            <% if (info.labels[i].id === 'email') { %>
+            <span id="email" class="action-chip email-chip"></span>
+            <% } else if (info.labels[i].name) { %>
+            <a id="<%= info.labels[i].id %>" href="<%= info.labels[i].url %>" class="action-chip" onclick="amplitude.getInstance().logEvent('<%= info.labels[i].name %>');">
+              <span><%= info.labels[i].name %></span>
+            </a>
+            <% } %>
           <% } %>
         </div>
-      <% } %>
-      <!-- / Render Labels -->
-
       </div>
-      <span class="angle down"><i class="angle double down big icon pulsate-opacity"></i></span>
-    </aside>
-    <!-- / Left Panel -->
 
-    <!-- Right Panel -->
-    <section class="ten wide column">
-      <div class="ui basic segment experience">
-        <h2 class="ui teal inverted header">
-          <i class="map icon"></i>
-          <span class="content">&lt;Experiences&nbsp;/&gt;</span>
-        </h2>
-
-        <!-- Render Exp -->
-        <% for (var i in exp) { %>
-        <div class="ui stackable grid">
-          <div class="wide column title">
-            <div class="ui medium yellow inverted header">
-              <div class="main header">
-                <i class="code icon"></i>
-                <%= exp[i].occupation %>
-              </div>
-              <div class="sub header company">
-                <i class="building outline icon"></i>
-                <%= exp[i].company %>
-              </div>
-              <div class="sub header location">
-                <i class="marker icon"></i>
-                <%= exp[i].location %>
-              </div>
-              <div class="sub header period">
-                <i class="calendar icon"></i>
-                <%= exp[i].period %>
-              </div>
-            </div>
-            <p class="description"><%= exp[i].description %></p>
-          </div>
+      <aside class="inventory" aria-label="Player inventory">
+        <div>
+          <span>Quests</span>
+          <strong><%= exp.length %></strong>
         </div>
-        <% } %>
-        <!-- / Render Exp -->
-
-      </div>
-
-      <div class="ui basic segment education">
-        <h2 class="ui teal inverted header">
-          <i class="student icon"></i>
-          <span class="content">&lt;Education&nbsp;/&gt;</span>
-        </h2>
-
-        <!-- Render Edu -->
-        <% for (var i in edu) { %>
-        <div class="ui stackable grid">
-          <div class="wide column">
-            <div class="ui medium yellow inverted header">
-              <div class="main header">
-                <i class="certificate icon"></i>
-                <%= edu[i].degree %>
-              </div>
-              <div class="sub header school">
-                <i class="university icon"></i>
-                <%= edu[i].school %>
-              </div>
-              <div class="sub header location">
-                <i class="marker icon"></i>
-                <%= edu[i].location %>
-              </div>
-              <div class="sub header period">
-                <i class="calendar icon"></i>
-                <%= edu[i].period %>
-              </div>
-            </div>
-            <div class="ui list description">
-              <% for (var j in edu[i].descriptions) { %>
-              <div class="item">
-                <i class="checkered flag icon"></i>
-                <div class="content"><%= edu[i].descriptions[j] %></div>
-              </div>
-              <% } %>
-            </div>
-          </div>
+        <div>
+          <span>Home base</span>
+          <strong>Vancouver</strong>
         </div>
-        <% } %>
-        <!-- / Render Edu -->
-
-      </div>
-
-      <div class="ui basic segment skills">
-        <h2 class="ui teal inverted header">
-          <i class="lab icon"></i>
-          <span class="content">&lt;Skills&nbsp;/&gt;</span>
-        </h2>
-        <div class="ui stackable grid">
-          <div class="eight wide column">
-
-          <!-- Render Skills -->
-          <% var half = Math.round(skills.length / 2); for (var i in skills) { %>
-          <% if (i == half) { %>
-          </div>
-          <div class="eight wide column">
-          <% } %>
-            <div class="ui active indicating small progress" data-percent="<%= skills[i].percent %>">
-              <div class="label"><%- skills[i].name %></div>
-              <div class="bar" style="width: <%= skills[i].percent %>%">
-                <div class="progress"><%= skills[i].percent %>%</div>
-              </div>
-            </div>
-          <% } %>
-          <!-- / Render Skills -->
-
-          </div>
+        <div>
+          <span>Main weapon</span>
+          <strong>Web</strong>
         </div>
-      </div>
-
-      <div class="ui basic segment EOF">
-        <h2 class="ui red inverted header">-- EOF --</h2>
-      </div>
+      </aside>
     </section>
-    <!-- / Right Panel -->
 
-    <!-- Footer -->
-    <footer class="six wide column">
-      <span>🇨🇦</span>
-      <i class="copyright icon"></i>2015 - <%= new Date().getFullYear() %> DN</footer>
-    <!-- / Footer -->
+    <section class="hud" aria-label="Dean Shi profile">
+      <nav class="game-nav" aria-label="Profile sections">
+        <a href="#attributes">Attributes</a>
+        <a href="#quests">Quest log</a>
+        <a href="#origin">Origin</a>
+      </nav>
+
+      <section id="attributes" class="panel attributes-panel">
+        <div class="panel-title">
+          <span>Stats</span>
+          <h2>Attribute build</h2>
+        </div>
+
+        <div class="stats-grid">
+          <% for (var i in skills) { %>
+          <article class="stat-card" style="--level:<%= skills[i].percent %>">
+            <div class="stat-top">
+              <h3><%- skills[i].name %></h3>
+              <strong><%= skills[i].percent %></strong>
+            </div>
+            <div class="stat-track" aria-hidden="true"><span></span></div>
+          </article>
+          <% } %>
+        </div>
+      </section>
+
+      <section id="quests" class="panel quests-panel">
+        <div class="panel-title">
+          <span>Campaign</span>
+          <h2>Quest log</h2>
+        </div>
+
+        <div class="quest-map">
+          <% for (var i in exp) { %>
+          <article class="quest-card">
+            <div class="quest-pin"><%= Number(i) + 1 %></div>
+            <div class="quest-content">
+              <div class="quest-meta">
+                <span><%= exp[i].period %></span>
+                <span><%= exp[i].location %></span>
+              </div>
+              <h3><%= exp[i].company %></h3>
+              <p class="quest-role"><%= exp[i].occupation %></p>
+              <p><%= exp[i].description %></p>
+            </div>
+          </article>
+          <% } %>
+        </div>
+      </section>
+
+      <section id="origin" class="panel origin-panel">
+        <div class="panel-title">
+          <span>Spawn point</span>
+          <h2>Origin story</h2>
+        </div>
+
+        <% for (var i in edu) { %>
+        <article class="origin-card">
+          <div>
+            <h3><%= edu[i].school %></h3>
+            <p><%= edu[i].degree %></p>
+            <span><%= edu[i].location %> · <%= edu[i].period %></span>
+          </div>
+          <ul>
+            <% for (var j in edu[i].descriptions) { %>
+            <li><%= edu[i].descriptions[j] %></li>
+            <% } %>
+          </ul>
+        </article>
+        <% } %>
+      </section>
+
+      <footer class="game-footer">
+        <span>DN save file</span>
+        <span>2015 - <%= new Date().getFullYear() %></span>
+      </footer>
+    </section>
   </main>
-  <!-- / Container -->
+
   <script>
-  // Prevent my email address being collected
   var username = '<%= info.email.user %>', hostname = '<%= info.email.host %>', linktext = username + '@' + hostname;
-  document.getElementById('email').innerHTML = '<a href="mailto:' + linktext + '" class="ui inverted basic yellow button"><i class="mail icon"></i>' + linktext + '</a>';
+  document.getElementById('email').innerHTML = '<a href="mailto:' + linktext + '" onclick="amplitude.getInstance().logEvent(\'Email\');"><span>' + linktext + '</span></a>';
   </script>
 </body>
 
