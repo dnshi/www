@@ -372,23 +372,26 @@ a { color: inherit; text-decoration: none; }
 }
 .ticker-track {
   display: inline-flex;
-  gap: 46px;
-  animation: marquee 28s linear infinite;
+  align-items: center;
+  animation: marquee 32s linear infinite;
   will-change: transform;
 }
 .ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker span {
   font-family: var(--mono);
-  font-size: 0.92rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
   display: inline-flex;
   align-items: center;
-  gap: 46px;
+  white-space: nowrap;
 }
 .ticker span::after {
   content: "✦";
+  margin: 0 30px;
+  font-size: 0.72em;
   color: var(--mint);
+  opacity: 0.6;
 }
 
 /* ============================================================
@@ -425,10 +428,14 @@ a { color: inherit; text-decoration: none; }
 
 .role {
   position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(16px, 2.5vw, 24px);
   padding: clamp(20px, 3vw, 30px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background:
+    radial-gradient(120% 130% at 0% 0%, color-mix(in oklab, var(--brand, var(--mint)) 12%, transparent), transparent 42%),
     linear-gradient(180deg, var(--surface), var(--bg-2));
   box-shadow: var(--shadow);
   transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(var(--rev, 26px));
@@ -437,7 +444,46 @@ a { color: inherit; text-decoration: none; }
   transform-style: preserve-3d;
 }
 .role.in { --op: 1; --rev: 0px; }
-.role:hover { border-color: rgba(94, 242, 201, 0.35); }
+.role:hover { border-color: color-mix(in oklab, var(--brand, var(--mint)) 45%, transparent); }
+
+/* brand-coloured monogram badge */
+.role-logo {
+  display: grid;
+  place-items: center;
+  width: clamp(46px, 6vw, 58px);
+  height: clamp(46px, 6vw, 58px);
+  border-radius: 14px;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  color: var(--brand, var(--mint));
+  background: color-mix(in oklab, var(--brand, var(--mint)) 16%, var(--bg));
+  border: 1px solid color-mix(in oklab, var(--brand, var(--mint)) 50%, transparent);
+  box-shadow: 0 0 22px -6px var(--brand, var(--mint)), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+.role-body { min-width: 0; }
+.highlights {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+.highlights li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  max-width: 78ch;
+}
+.highlights li::before {
+  content: "";
+  position: absolute;
+  left: 2px; top: 0.62em;
+  width: 7px; height: 1px;
+  background: var(--brand, var(--mint));
+  box-shadow: 0 0 8px var(--brand, var(--mint));
+}
 
 /* node dot on the spine */
 .role .node {
@@ -486,14 +532,7 @@ a { color: inherit; text-decoration: none; }
   width: 5px; height: 5px; border-radius: 50%;
   background: var(--faint);
 }
-.role p.desc { color: var(--muted); font-size: 0.98rem; max-width: 74ch; }
-.role .tag {
-  position: absolute;
-  top: clamp(20px, 3vw, 30px); right: clamp(20px, 3vw, 30px);
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--faint);
-}
+.role p.desc { color: var(--text); font-size: 1rem; font-weight: 500; max-width: 74ch; }
 
 /* ============================================================
    LOADOUT (skills + stats)
@@ -578,6 +617,48 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   letter-spacing: 0.02em;
 }
+
+/* ---- capabilities matrix ---- */
+.caps {
+  margin-top: clamp(34px, 5vw, 60px);
+  border-top: 1px solid var(--line);
+}
+.cap-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: clamp(14px, 3vw, 40px);
+  padding: clamp(18px, 2.6vw, 26px) 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.cap-label {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mint);
+  padding-top: 7px;
+}
+.cap-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+.tag-chip {
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.86rem;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.25s, color 0.25s, background 0.25s, transform 0.25s var(--ease);
+}
+.tag-chip:hover {
+  border-color: rgba(94, 242, 201, 0.5);
+  color: var(--mint);
+  transform: translateY(-2px);
+}
+.cap-row[data-accent] .cap-label { color: var(--blue); }
+.cap-row[data-accent] .tag-chip {
+  border-color: color-mix(in oklab, var(--blue) 38%, transparent);
+  background: color-mix(in oklab, var(--blue) 8%, transparent);
+}
+.cap-row[data-accent] .tag-chip:hover { color: var(--blue); border-color: var(--blue); }
 
 /* ============================================================
    ORIGIN (education)
@@ -700,13 +781,19 @@ a { color: inherit; text-decoration: none; }
   .hero-foot { flex-direction: column; align-items: flex-start; gap: 14px; }
 }
 
+@media (max-width: 620px) {
+  .cap-row { grid-template-columns: 1fr; gap: 12px; }
+  .cap-label { padding-top: 0; }
+}
+
 @media (max-width: 560px) {
   .topbar .monogram small { display: none; }
   .actions { width: 100%; }
   .chip { flex: 1 1 auto; justify-content: center; }
   .stats { grid-template-columns: 1fr; }
-  .role .tag { display: none; }
-  .ticker-track { animation-duration: 18s; }
+  .role { grid-template-columns: 1fr; gap: 14px; }
+  .role-logo { width: 44px; height: 44px; }
+  .ticker-track { animation-duration: 22s; }
 }
 
 /* Respect reduced motion */

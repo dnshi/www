@@ -31,12 +31,12 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Dean Shi",
-    "jobTitle": "Senior Software Engineer",
+    "jobTitle": "Senior Frontend / Platform Engineer",
     "url": "https://deanshi.com/",
     "email": "mailto:<%= info.email.user %>@<%= info.email.host %>",
     "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "BC", "addressCountry": "CA" },
     "sameAs": ["https://github.com/dnshi", "https://ca.linkedin.com/in/deanshi"],
-    "knowsAbout": ["JavaScript", "TypeScript", "React", "Node.js", "Front-end infrastructure", "Web development"]
+    "knowsAbout": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Micro-frontends", "SDK architecture", "Web performance"]
   }
   </script>
 </head>
@@ -62,7 +62,7 @@
     <div class="topbar">
       <span class="monogram">
         <span class="mark">DS</span>
-        <span>Dean Shi<small>Senior Software Engineer</small></span>
+        <span>Dean Shi<small>Frontend / Platform Engineer</small></span>
       </span>
       <span class="status">
         <span class="dot" aria-hidden="true"></span>
@@ -71,12 +71,12 @@
     </div>
 
     <div class="hero-core">
-      <p class="kicker"><span class="rule" aria-hidden="true"></span> Senior Software Engineer · <b>building the web since <%= firstYear %></b></p>
+      <p class="kicker"><span class="rule" aria-hidden="true"></span> Senior Frontend / Platform Engineer · <b>building the web since <%= firstYear %></b></p>
       <h1 class="title">
         <span class="line"><span class="word">Dean</span></span>
         <span class="line"><span class="word accent">Shi</span></span>
       </h1>
-      <p class="lede">I build <b>browser products</b>, <b>front-end infrastructure</b>, and the back-end logic behind them — turning fuzzy ideas into fast, durable interfaces. Currently shipping analytics at scale in Vancouver.</p>
+      <p class="lede">Senior frontend &amp; platform engineer with <b>13+ years</b> turning fuzzy ideas into fast, durable interfaces — <b>micro-frontend architecture</b>, <b>SDK development</b>, and high-traffic web platforms at Amplitude, Microsoft, and Amazon.</p>
 
       <nav class="actions" aria-label="Contact links">
         <% for (var i in info.labels) { var L = info.labels[i]; %>
@@ -114,8 +114,9 @@
   <!-- ===================== TICKER ===================== -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
-      <span><% for (var i in exp) { %><%= exp[i].company %><% } %></span>
-      <span><% for (var i in exp) { %><%= exp[i].company %><% } %></span>
+      <% for (var pass = 0; pass < 2; pass++) { %>
+        <% for (var i in exp) { %><span style="color:<%= exp[i].color %>"><%= exp[i].company %></span><% } %>
+      <% } %>
     </div>
   </div>
 
@@ -132,18 +133,27 @@
 
       <div class="timeline" data-tilt-group>
         <% for (var i in exp) { %>
-        <article class="role" data-tilt>
+        <article class="role" data-tilt style="--brand:<%= exp[i].color %>">
           <span class="node" aria-hidden="true"></span>
-          <span class="tag">0<%= Number(i) + 1 %></span>
-          <div class="role-top">
-            <h3><%= exp[i].company %></h3>
-            <span class="period"><%= exp[i].period %></span>
+          <span class="role-logo" aria-hidden="true"><%= exp[i].mark %></span>
+          <div class="role-body">
+            <div class="role-top">
+              <h3><%= exp[i].company %></h3>
+              <span class="period"><%= exp[i].period %></span>
+            </div>
+            <div class="meta">
+              <span class="occ"><%= exp[i].occupation %></span>
+              <span class="loc"><%= exp[i].location %></span>
+            </div>
+            <p class="desc"><%= exp[i].description %></p>
+            <% if (exp[i].highlights) { %>
+            <ul class="highlights">
+              <% for (var h in exp[i].highlights) { %>
+              <li><%= exp[i].highlights[h] %></li>
+              <% } %>
+            </ul>
+            <% } %>
           </div>
-          <div class="meta">
-            <span class="occ"><%= exp[i].occupation %></span>
-            <span class="loc"><%= exp[i].location %></span>
-          </div>
-          <p class="desc"><%= exp[i].description %></p>
         </article>
         <% } %>
       </div>
@@ -190,6 +200,19 @@
             <div class="label">Core stacks in daily rotation</div>
           </div>
         </div>
+      </div>
+
+      <div class="caps">
+        <% for (var c in capabilities) { %>
+        <div class="cap-row"<% if (capabilities[c].group === 'AI Tools') { %> data-accent<% } %>>
+          <span class="cap-label"><%= capabilities[c].group %></span>
+          <div class="cap-tags">
+            <% for (var t in capabilities[c].items) { %>
+            <span class="tag-chip"><%= capabilities[c].items[t] %></span>
+            <% } %>
+          </div>
+        </div>
+        <% } %>
       </div>
     </section>
 
