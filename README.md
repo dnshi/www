@@ -1,41 +1,56 @@
-# DEAN'S PERSONAL PAGE
-[![GitHub license](https://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
+# Dean Shi — Personal Page
+
+[![License: MIT](https://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/313cf600-915b-4cf8-a9b8-a073bdfbf2ed/deploy-status)](https://app.netlify.com/sites/deanshi/deploys)
 
-This is Dean Shi's personal page to exhibit experience, education and skills
+Personal website for [deanshi.com](https://deanshi.com) — a deep-space engineering console built with vanilla HTML, CSS, and JavaScript. No framework, no bundler.
 
-### How to build
-You will need Node.js or io.js installed on your machine. Then run:
+## Tech
 
-``` shell
-# Clone the source
+- **Build** — Node.js + [EJS](https://ejs.co/) template rendering, ~20-line custom build script
+- **CSS** — Vanilla CSS with custom properties, inlined at build time
+- **JS** — Vanilla JS: canvas starfield, IntersectionObserver reveals, 3D tilt, count-up animations
+- **Fonts** — Space Grotesk + JetBrains Mono (Google Fonts)
+- **Icons** — [Devicon](https://devicon.dev/)
+
+## Getting started
+
+Requires Node.js ≥ 22.
+
+```sh
 git clone https://github.com/dnshi/www.git && cd www
-# Install dependencies
 npm install
-# Build
 npm run build
-# Start server
 npm start
-
-open http://127.0.0.1:8080
+# open http://localhost:3000
 ```
 
-Minified html and css files are under the `dist` folder.
+## Scripts
 
-### Resume
-Looks like this site is no longer available 🙁
+| Command | Description |
+|---------|-------------|
+| `npm run build` | Render EJS template → `dist/index.html`, copy OG image |
+| `npm start` | Serve `dist/` locally via `npx serve` |
+| `npm run clean` | Remove `dist/` |
 
-~You can also see [my resume](http://resume.github.io/?dnshi), powered by [RESUME](https://github.com/resume/resume.github.com)~
+## Project structure
 
-### GitHub Profile Summary
-Check [my Github profile summary](https://profile-summary-for-github.com/user/dnshi), powered by [github-profile-summary](https://github.com/tipsy/github-profile-summary)
+```
+src/
+  index.html   EJS template
+  main.css     Styles (inlined at build time)
+  config.json  All resume data — edit this to update content
+  og.svg       Social sharing card (1200×630)
+scripts/
+  build.js     Build script
+dist/          Generated output (git-ignored)
+legacySite/    Archive of the previous gulp/stylus version
+```
 
-### Dungeons & Developers
-As a fun way to assess, promote and learn the skills it takes to design and develop great web sites. You can access the [website](http://www.dungeonsanddevelopers.com/#_a2b2c2de3fghi2jklm2n2opqr2s2tuvwx2y2z_19_Dean) to see my web development's level.
+## Updating content
 
-### Old Personal Page
-Updated at 2019/05/08: Glad I added it back🎉🎉 Click [HERE](https://epic.deanshi.com/)
+All resume data lives in [`src/config.json`](src/config.json) — experience, skills, education, capabilities. Edit that file and run `npm run build`.
 
-Our school removed my portal 🙁
+## License
 
-~I found my first personal web page hosted on our Acadia University server. This was almost the first try for HTML5 drag & drop feature and couple css3 styles. Click [HERE](http://falcon.acadiau.ca/~093997s/xiao_shi/) to access it!~
+MIT

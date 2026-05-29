@@ -1,49 +1,32 @@
 {
-  "title": "Dean Shi - Senior Software Engineer",
+  "title": "Dean Shi — Senior Frontend / Platform Engineer",
   "meta": {
     "author": "Dean Shi",
-    "description": "Dean Shi is a Senior Software Engineer at Amplitude. His area is mainly on web development including designing font-end infrastructure, setting up web service, implementing back-end logic and optimizing workflow.",
-    "keywords": "Dean Shi, Software Engineer, Developer, Amplitude, Microsoft, Amazon, Vancouver, Web, Frontend, JavaScript, Acadia University",
-    "copyright": "DN",
-    "language": "EN"
+    "description": "Senior frontend & platform engineer — micro-frontends, high-traffic web platforms, CSS architecture. 13+ years at Amplitude, Microsoft, and Amazon.",
+    "keywords": "Dean Shi, Frontend Engineer, Platform Engineer, Micro-frontend, SDK, Next.js, Web Performance, Amplitude, Microsoft, Amazon, Vancouver, TypeScript, React",
+    "copyright": "DN"
   },
   "links": [
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/reset.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/site.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/grid.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/list.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/header.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/button.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/icon.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/progress.min.css",
-    "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/components/segment.min.css",
-    "//cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"
+    "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap",
+    "//cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
   ],
   "info": {
-    "name": "<span style=\"font-size:1rem;color:#5DFF8A\">const</span> Dean Shi",
-    "title": "= Senior Software Engineer",
     "email": {
       "user": "im",
       "host": "deanshi.com"
     },
     "labels": [{
       "id": "github",
-      "icon": "github",
-      "color": "orange",
       "name": "Github",
       "url": "https://github.com/dnshi"
     }, {
       "id": "linkedin",
-      "icon": "linkedin",
-      "color": "blue",
       "name": "LinkedIn",
       "url": "https://ca.linkedin.com/in/deanshi"
     }, {
       "id": "email"
     }, {
       "id": "location",
-      "icon": "marker",
-      "color": "teal",
       "name": "Vancouver, BC",
       "url": "https://www.google.ca/maps/place/Vancouver,+BC"
     }]
@@ -51,52 +34,84 @@
 
   "exp": [{
     "company": "Amplitude",
+    "mark": "A",
+    "color": "#2f6bff",
     "location": "Vancouver, BC",
     "period": "2022 - 2025",
     "occupation": "Senior Software Engineer",
-    "description": "Analytics team member. Formerly team member of Amplitude SDK and Front-end Infra"
+    "description": "Analytics platform — micro-frontend architecture, SDKs, and product-led growth.",
+    "highlights": [
+      "Led the integration of four web products into a unified single-page platform via micro-frontend architecture — consistent navigation, release isolation, and shared capabilities.",
+      "Built a UI version switcher with server-side rendering, feature flags, and manifest-driven controlled migrations.",
+      "Developed the next generation of Amplitude SDKs for browsers, Node.js, and Unity.",
+      "Drove Product-Led Growth work across acquisition, activation, engagement, and retention."
+    ]
   }, {
     "company": "Microsoft",
+    "mark": "MS",
+    "color": "#34c3ff",
     "location": "Vancouver, BC",
     "period": "2020 - 2022",
     "occupation": "Software Engineer 2",
-    "description": "Core member of MSN Homepage. Formerly team member of Microsoft PowerBI"
+    "description": "MSN.com homepage and Edge surfaces at consumer scale.",
+    "highlights": [
+      "Led the Web Components migration and CSS Grid rebuild of the MSN.com homepage.",
+      "Cut initial load by moving expensive work off the main thread with Web Workers.",
+      "Shipped features for Microsoft Edge's Web Widget and New Tab Page across browser, content, and platform teams."
+    ]
   }, {
     "company": "Amazon",
+    "mark": "a",
+    "color": "#ff9d2e",
     "location": "Vancouver, BC",
     "period": "2018 - 2020",
     "occupation": "Web Development Engineer",
-    "description": "Web Development + Product Deployment + System Operations"
+    "description": "Front-end infrastructure and UI architecture for a web platform.",
+    "highlights": [
+      "Owned front-end infrastructure and operational config: DNS, virtual IPs, SSL, AWS resources, and build pipelines.",
+      "Led UI architecture and delivery of a full web app from early requirements through launch.",
+      "Built a virtualized table component for fast interaction over large datasets."
+    ]
   }, {
     "company": "7Geese",
+    "mark": "7G",
+    "color": "#19c6a8",
     "location": "Vancouver, BC",
     "period": "2018 - 2018",
     "occupation": "Software Developer",
-    "description": "70% Frontend developer + 30% Product designer. Influenced both development team and product design team and made strategic planning which dove deeply on customers' requirements and covered long-term thinking of business value."
+    "description": "Front-end development with product-design input on a performance-management SaaS."
   }, {
     "company": "ACL Services Ltd.",
+    "mark": "AC",
+    "color": "#3d7bff",
     "location": "Vancouver, BC",
     "period": "2015 - 2017",
     "occupation": "Software Engineer",
-    "description": "Front-end developer and having been working on multiple core products as well as developing a few simple side projects with team members, which were to introduce the most cutting-edge technologies as proof of concepts and spikes. "
+    "description": "Front-end engineer across core data-analytics products and proof-of-concept spikes."
   }, {
     "company": "Istuary Innovation Labs",
+    "mark": "I",
+    "color": "#8b6bff",
     "location": "Vancouver, BC",
     "period": "2014 - 2015",
     "occupation": "Software Engineer",
-    "description": "Key member on the Front-end team. Applied a plenty of cutting-edge tools, libraries and technologies on the core product to benefit development experience and improve product's maintainability."
+    "description": "Front-end team member modernizing the core product's tooling and maintainability."
   }, {
     "company": "Electronic Arts",
+    "mark": "EA",
+    "color": "#ff5a5a",
     "location": "Burnaby, BC",
     "period": "2013 - 2013",
     "occupation": "Associate Software Engineer",
-    "description": "Worked on FIFA Online Services team (FIFA 14), and participated in the full cycle of a video game development."
+    "description": "FIFA Online Services team (FIFA 14) — full cycle of game-service development."
   }, {
     "company": "Novex Software",
+    "mark": "N",
+    "color": "#6c8cff",
     "location": "New Minas, NS",
     "period": "2012 - 2012",
     "occupation": "Software Developer",
-    "description": "Bridged serial communications protocols between a device (client) to a server, and implemented control data transmission by C and Java."
+    "description": "Bridged serial communication protocols between device and server in C and Java."
   }],
 
   "edu": [{
@@ -104,20 +119,34 @@
     "school": "Acadia University",
     "location": "Wolfville, NS",
     "period": "2009 - 2014",
-    "descriptions": ["Twice attended ACM Programming contest", "Teaching Assistant for Software Engineering 1", "Teaching Assistant for Computer Programing 3"]
+    "descriptions": ["Twice attended ACM Programming contest", "Teaching Assistant for Software Engineering 1", "Teaching Assistant for Computer Programming 3"]
   }],
 
   "skills": [{
     "name": "<i class=\"devicon-javascript-plain\"></i> JavaScript & <i class=\"devicon-typescript-plain\"></i> TypeScript",
     "percent": 99
   }, {
-    "name": "<i class=\"devicon-react-original\"></i> ReactJS & <i class=\"devicon-redux-original\"></i> Redux",
+    "name": "<i class=\"devicon-react-original\"></i> React & <i class=\"devicon-redux-original\"></i> Redux",
     "percent": 95
   }, {
-    "name": "<i class=\"devicon-nodejs-plain\"></i> NodeJS",
+    "name": "<i class=\"devicon-nodejs-plain\"></i> Node.js",
     "percent": 85
   }, {
-    "name": "<i class=\"devicon-webpack-plain\"></i> Webpack",
-    "percent": 80
+    "name": "<i class=\"devicon-webpack-plain\"></i> Webpack & <i class=\"devicon-vitejs-plain\"></i> Vite",
+    "percent": 82
+  }],
+
+  "capabilities": [{
+    "group": "Frontend",
+    "items": ["TypeScript", "React", "Next.js", "Remix", "Web Components", "Redux", "Tailwind CSS", "Accessibility"]
+  }, {
+    "group": "Platform",
+    "items": ["Micro-frontends", "Module Federation", "SSR", "Feature Flags", "A/B Testing", "SDK Architecture", "Web Performance", "CDN / CloudFront"]
+  }, {
+    "group": "Backend & Tools",
+    "items": ["Node.js", "Express", "WebSocket", "AWS", "Docker", "Jest", "CI/CD"]
+  }, {
+    "group": "AI Tools",
+    "items": ["Claude Code", "GitHub Copilot", "Gemini CLI", "VS Code"]
   }]
 }

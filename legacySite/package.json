@@ -1,17 +1,16 @@
 {
   "name": "personal-page",
-  "private": true,
   "version": "1.2.0",
   "homepage": "https://deanshi.com",
   "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
   "author": "Dean Shi <dean.xiaoshi@gmail.com> (https://github.com/dnshi)",
   "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.0.0"
+    "node": ">=10.0.0",
+    "npm": "^5.0.0"
   },
   "scripts": {
-    "start": "npx serve ./dist",
-    "build": "npm run clean && node scripts/build.js",
+    "start": "http-server ./dist",
+    "build": "npm run clean && gulp",
     "clean": "rm -rf ./dist"
   },
   "license": "MIT",
@@ -20,6 +19,10 @@
     "url": "https://github.com/dnshi/www"
   },
   "devDependencies": {
-    "ejs": "^3.1.10"
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-stylus": "^2.7.0",
+    "http-server": "^0.12.3"
   }
 }
