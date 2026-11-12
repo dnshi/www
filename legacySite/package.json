@@ -1,0 +1,28 @@
+{
+  "name": "personal-page",
+  "version": "1.2.0",
+  "homepage": "https://deanshi.com",
+  "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
+  "author": "Dean Shi <dean.xiaoshi@gmail.com> (https://github.com/dnshi)",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": "^5.0.0"
+  },
+  "scripts": {
+    "start": "http-server ./dist",
+    "build": "npm run clean && gulp",
+    "clean": "rm -rf ./dist"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnshi/www"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-ejs": "^5.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-stylus": "^2.7.0",
+    "http-server": "^0.12.3"
+  }
+}
