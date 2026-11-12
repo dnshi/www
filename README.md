@@ -51,6 +51,15 @@ legacySite/    Archive of the previous gulp/stylus version
 
 All resume data lives in [`src/config.json`](src/config.json) — experience, skills, education, capabilities. Edit that file and run `npm run build`.
 
+## Archives
+
+- [`myPathSite/`](myPathSite/ARCHIVE.md) preserves the interactive My Path /
+  Signal Dive experiment, including the Three.js world, milestone stories,
+  dependency lockfile, and tests. It builds and runs independently.
+- [`consoleSite/`](consoleSite/ARCHIVE.md) preserves the console-style version
+  that the active homepage has been restored from.
+- `legacySite/` contains the earlier Gulp/Stylus page.
+
 ## License
 
 MIT

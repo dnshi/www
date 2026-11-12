@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <% for (const [key, value] of Object.entries(meta)) { %>
+  <meta name="<%= key %>" content="<%= value %>">
+  <% } %>
+  <title><%= title %></title>
+  <link rel="canonical" href="https://deanshi.com/">
+  <meta name="theme-color" content="#030c11">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://deanshi.com/">
+  <meta property="og:title" content="Dean Shi — My path through the web">
+  <meta property="og:description" content="<%= meta.description %>">
+  <meta property="og:image" content="https://deanshi.com/og.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dean Shi — My path through the web">
+  <meta name="twitter:description" content="<%= meta.description %>">
+  <meta name="twitter:image" content="https://deanshi.com/og.svg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23030c11'/%3E%3Cpath d='m16 5 7 11-7 11-7-11Z' fill='none' stroke='%237dffdb' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style><%- css %></style>
+  <script type="application/ld+json"><%- personJson %></script>
+</head>
+<body>
+  <a class="skip-link" href="#resume" data-resume>Skip to résumé</a>
+  <section class="game-shell" id="game-shell" aria-label="Dean Shi, an interactive career autobiography">
+    <div id="world" class="world" aria-hidden="true"></div>
+    <div class="world-shade" aria-hidden="true"></div>
+    <header class="game-header">
+      <a class="identity" href="#" id="home-link" aria-label="Dean Shi, return to the start"><span class="brand-mark" aria-hidden="true">◇</span><span>Dean Shi<span class="brand-subtitle">MY PATH</span></span></a>
+      <nav aria-label="Quick access">
+        <button type="button" id="journey-menu" hidden>My path <span aria-hidden="true">⊞</span></button>
+        <a href="#resume" data-resume>Résumé <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <div class="intro" id="intro">
+      <p class="eyebrow"><span class="live-dot"></span> A CAREER, STILL UNFOLDING</p>
+      <h1 id="intro-title">I'm Dean.<br><em>I build.</em></h1>
+      <p class="intro-description">From Acadia to Microsoft Fabric, my work has grown from shipping products to building the platforms underneath them.</p>
+      <p class="intro-byline">Dean Shi <span>/</span> <%= records[0].occupation %><br><%= records[0].company %> <span>·</span> <%= records[0].location %></p>
+      <div class="intro-actions"><a class="primary-button" id="enter-system" href="#resume">Explore the résumé <span aria-hidden="true">→</span></a><span>2009 → today<br>Four chapters. One engineer.</span></div>
+    </div>
+    <div class="intro-caption" id="intro-caption"><span class="orbit-symbol" aria-hidden="true">◎</span><span>Product teams → Amazon → Microsoft<br>→ Amplitude → Microsoft Fabric</span></div>
+
+    <div class="flight-ui" id="flight-ui" hidden>
+      <div class="journey-counter"><span class="live-dot"></span><span id="connected-count">0 / 4 chapters explored</span><button type="button" id="motion-toggle" aria-pressed="false">Motion on</button></div>
+      <div class="chapter-dock" id="chapter-dock">
+        <a class="milestone-read" id="milestone-read" href="#<%= exhibit.stations[0].record %>" data-open-record="<%= exhibit.stations[0].record %>">Details ↗</a>
+        <p class="eyebrow" id="zone-number"><%= exhibit.stations[0].number %> / <%= exhibit.stations[0].period %></p>
+        <h2 id="zone-title"><%= exhibit.stations[0].title %></h2>
+        <p id="zone-company"><%= exhibit.stations[0].subtitle %></p>
+        <p class="zone-hint" id="zone-hint"><%= exhibit.stations[0].summary %></p>
+        <p class="milestone-proof" id="zone-proof"><%= exhibit.stations[0].proof %></p>
+      </div>
+      <nav class="route-map" aria-label="Travel to a career world">
+        <% for (const station of exhibit.stations) { %>
+        <a href="#<%= station.record %>" data-station="<%= station.id %>" data-travel="<%= station.id %>" aria-label="<%= station.period %>: <%= station.title %>, <%= station.subtitle %>"><span class="route-dot" aria-hidden="true"></span><span><%= station.startYear %></span><strong><%= station.nav %></strong><span class="connection-check" aria-hidden="true">✓</span></a>
+        <% } %>
+      </nav>
+      <div class="flight-bottom">
+        <p class="flight-hint" id="flight-hint">Move to drift <span>·</span> Scroll to travel</p>
+        <div class="travel-controls"><button type="button" id="previous-station" aria-label="Travel to previous career chapter">←</button><button type="button" id="next-station">Next chapter <span aria-hidden="true">→</span></button></div>
+      </div>
+      <div class="route-progress" aria-hidden="true"><span id="route-progress"></span></div>
+    </div>
+    <p class="world-status" id="world-status" role="status">The interactive world is loading. The complete résumé is available below.</p>
+    <noscript><p class="no-script">JavaScript is off. Your journey continues in the résumé below.</p></noscript>
+  </section>
+
+  <section class="resume-sheet" id="resume" aria-label="Dean Shi, complete résumé">
+    <div class="resume-header"><div><p class="eyebrow">THE WORK BEHIND MY PATH</p><h2>Dean Shi</h2><p><%= records[0].occupation %> / <%= records[0].location %></p></div><a class="primary-button" href="mailto:<%= info.email.user %>@<%= info.email.host %>">Say hello ↗</a></div>
+    <main>
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">The trajectory</h2>
+        <% for (const [index, record] of records.entries()) { %>
+        <details class="experience-record" id="<%= record.id %>" open>
+          <summary><span class="record-index"><%= String(index + 1).padStart(2, '0') %></span><span><strong class="record-company"><%= record.company %></strong><span class="record-role"><%= record.occupation %></span></span><span class="record-period"><%= record.period %></span><span class="record-expand" aria-hidden="true">+</span></summary>
+          <div class="record-content"><p class="record-location"><%= record.location %></p><p><%= record.description %></p><% if (record.highlights) { %><ul><% for (const highlight of record.highlights) { %><li><%= highlight %></li><% } %></ul><% } %><a class="record-permalink" href="#<%= record.id %>" data-open-record="<%= record.id %>">Open chapter ↗</a></div>
+        </details>
+        <% } %>
+      </section>
+      <section id="expertise" aria-labelledby="expertise-title">
+        <p class="eyebrow">THE CONNECTIONS</p><h2 id="expertise-title">Capabilities, with evidence.</h2>
+        <div class="capability-filters" aria-label="Highlight experience by capability">
+          <button type="button" data-filter="all" aria-pressed="true">All connections</button>
+          <% for (const filter of exhibit.filters) { %><button type="button" data-filter="<%= filter.id %>" aria-pressed="false"><%= filter.label %></button><% } %>
+        </div>
+        <p id="evidence-description" aria-live="polite">A connected view of frontend, infrastructure, performance, and platforms.</p><div id="evidence-links"></div>
+        <div class="toolkit"><% for (const capability of capabilities) { %><div><h3><%= capability.group %></h3><p><%= capability.items.join(' / ') %></p></div><% } %></div>
+      </section>
+      <section class="education" id="education"><p class="eyebrow">THE FOUNDATIONS</p><% for (const education of edu) { %><h2><%= education.school %></h2><p><%= education.degree %></p><p class="record-location"><%= education.period %> / <%= education.location %></p><ul><% for (const description of education.descriptions) { %><li><%= description %></li><% } %></ul><% } %><a href="https://epic.deanshi.com/" target="_blank" rel="noopener noreferrer">An earlier experiment in building for the web ↗</a></section>
+    </main>
+    <footer id="contact"><span>© <%= new Date().getFullYear() %> Dean Shi</span><nav aria-label="Social links"><% for (const label of info.labels.filter(label => ['github', 'linkedin'].includes(label.id))) { %><a href="<%= label.url %>" target="_blank" rel="noopener noreferrer"><%= label.name %> ↗</a><% } %><a href="mailto:<%= info.email.user %>@<%= info.email.host %>">Email ↗</a></nav></footer>
+  </section>
+
+  <dialog id="resume-dialog" class="resume-dialog" aria-label="Complete résumé">
+    <div class="sheet-bar"><span>THE COMPLETE PICTURE</span><button type="button" data-close-dialog>Back to the dive <span aria-hidden="true">×</span></button></div>
+    <div id="resume-mount"></div>
+  </dialog>
+  <dialog id="experience-dialog" class="experience-dialog" aria-labelledby="dialog-company" aria-describedby="dialog-role">
+    <div class="sheet-bar"><span id="dialog-index">CHAPTER 01</span><button type="button" data-close-dialog>Back to the dive <span aria-hidden="true">×</span></button></div>
+    <div class="chapter-body"><p class="eyebrow" id="dialog-period"></p><h2 id="dialog-company"></h2><p id="dialog-role"></p><div id="dialog-content"></div><div class="dialog-navigation"><button type="button" id="previous-record">← Previous</button><a href="#resume" id="dialog-read">Complete résumé ↗</a><button type="button" id="next-record">Next →</button></div></div>
+  </dialog>
+  <dialog id="map-dialog" class="map-dialog" aria-labelledby="map-title">
+    <div class="sheet-bar"><span>MY PATH THROUGH THE WEB</span><button type="button" data-close-dialog>Close <span aria-hidden="true">×</span></button></div>
+    <div class="map-body"><p class="eyebrow">2009 → TODAY</p><h2 id="map-title">How my work grew.</h2><div class="map-destinations"><% for (const station of exhibit.stations) { %><a href="#<%= station.record %>" data-travel="<%= station.id %>" data-milestone="<%= station.id %>"><span><%= station.number %></span><div><h3><%= station.title %></h3><p><%= station.period %> / <%= station.subtitle %></p><p class="milestone-description"><%= station.summary %></p></div><span aria-hidden="true">↗</span></a><% } %></div><p>Move to drift. Scroll, swipe up, or use the arrow keys to travel through my career. The story is visible as you arrive; opening a chapter is optional.</p></div>
+  </dialog>
+  <script type="module" src="/static/main.js"></script>
+</body>
+</html>

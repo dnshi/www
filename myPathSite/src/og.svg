@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="depth"><stop stop-color="#133c43"/><stop offset="1" stop-color="#030c11"/></radialGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7dffdb" stop-opacity=".2"/><stop offset="1" stop-color="#7dffdb"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#030c11"/>
+  <ellipse cx="850" cy="320" rx="480" ry="400" fill="url(#depth)"/>
+  <g fill="#0b252e" stroke="#25565e">
+    <path d="M660 440V145L715 125V420ZM1080 500V70L1140 90V540ZM970 450V170L1010 155V490Z"/>
+    <path d="M620 410V260L650 245V430ZM1025 510V295L1060 310V550Z"/>
+  </g>
+  <g fill="none" stroke="#7dffdb">
+    <ellipse cx="865" cy="290" rx="178" ry="211" opacity=".18" stroke-width="16"/>
+    <ellipse cx="865" cy="290" rx="178" ry="211" opacity=".8" stroke-width="2"/>
+    <ellipse cx="865" cy="290" rx="143" ry="173" opacity=".35"/>
+    <ellipse cx="865" cy="290" rx="105" ry="124" opacity=".15"/>
+  </g>
+  <g fill="none" stroke="url(#river)">
+    <path d="M1190 650C720 520 620 440 835 345" stroke-width="4"/>
+    <path d="M1100 650C700 510 650 430 850 345"/>
+    <path d="M1000 650C680 500 690 430 865 345"/>
+    <path d="M900 650C650 490 720 425 880 345"/>
+    <path d="M800 650C620 480 750 425 895 345"/>
+  </g>
+  <path d="m850 389 10 18-10 18-10-18Z" fill="#caffee"/>
+  <path d="M850 425 880 505" stroke="#7dffdb" stroke-width="2"/>
+  <g font-family="Arial,sans-serif">
+    <text x="60" y="65" fill="#effff8" font-size="23">◇ Dean Shi</text>
+    <text x="60" y="165" fill="#7dffdb" font-size="13" letter-spacing="3">A CAREER, STILL UNFOLDING</text>
+    <text x="53" y="280" fill="#effff8" font-size="105" letter-spacing="-7">I'm Dean.</text>
+    <text x="53" y="390" fill="#7dffdb" font-size="105" letter-spacing="-7">I build.</text>
+    <text x="60" y="457" fill="#c4d9d4" font-size="21">Products → delivery → platforms.</text>
+    <text x="60" y="496" fill="#a4c4c6" font-size="17">Senior Software Engineer / Microsoft / Vancouver</text>
+    <rect x="60" y="545" width="205" height="47" rx="4" fill="#7dffdb"/>
+    <text x="80" y="575" fill="#031913" font-size="17">Follow my path →</text>
+    <text x="1140" y="585" fill="#a4c4c6" font-size="16" text-anchor="end">deanshi.com</text>
+  </g>
+</svg>

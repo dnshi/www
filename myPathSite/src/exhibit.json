@@ -1,0 +1,51 @@
+{
+  "stations": [
+    {
+      "id": "origins", "number": "01", "startYear": 2009, "period": "2009 — 2018",
+      "title": "Code to product", "nav": "Acadia & early teams",
+      "subtitle": "Acadia · Novex · EA · Istuary · ACL · 7Geese",
+      "summary": "From Acadia CS to device protocols, FIFA 14, and frontend engineering with product-design input.",
+      "proof": "C / Java → game services → frontend + product",
+      "record": "novex-software-2012",
+      "records": ["novex-software-2012", "electronic-arts-2013", "istuary-innovation-labs-2014", "acl-services-ltd-2015", "7geese-2018"],
+      "color": "#c3b7ff",
+      "labels": ["C / JAVA", "FIFA 14", "FRONTEND", "PRODUCT"]
+    },
+    {
+      "id": "delivery", "number": "02", "startYear": 2018, "period": "2018 — 2022",
+      "title": "Own the delivery", "nav": "Amazon → Microsoft",
+      "subtitle": "Amazon · Microsoft MSN / Edge",
+      "summary": "I led a web app from requirements to launch at Amazon, then moved expensive MSN work off the main thread at Microsoft.",
+      "proof": "Requirements → launch · main thread → workers",
+      "record": "amazon-2018", "records": ["amazon-2018", "microsoft-2020"],
+      "color": "#ffb98a",
+      "labels": ["UI", "BUILD / OPS", "WEB WORKERS", "DELIVERY"]
+    },
+    {
+      "id": "signal", "number": "03", "startYear": 2022, "period": "2022 — 2025",
+      "title": "Products into a platform", "nav": "Amplitude",
+      "subtitle": "Amplitude / Frontend Infra & SDKs",
+      "summary": "I led four web products into one platform and built SDKs for browsers, Node.js and Unity.",
+      "proof": "4 web products → 1 shared platform",
+      "record": "amplitude-2022", "records": ["amplitude-2022"],
+      "color": "#81d8ff",
+      "labels": ["PRODUCT 1", "PRODUCT 2", "PRODUCT 3", "PRODUCT 4", "ONE PLATFORM"]
+    },
+    {
+      "id": "core", "number": "04", "startYear": 2026, "period": "2026 — now",
+      "title": "Shared foundations", "nav": "Microsoft Fabric",
+      "subtitle": "Microsoft / Fabric Shell",
+      "summary": "I architect Fabric Shell capabilities for extension hosting, authentication and shared client infrastructure.",
+      "proof": "Extensions + identity + shared infrastructure",
+      "record": "microsoft-2026", "records": ["microsoft-2026"],
+      "color": "#7dffdb",
+      "labels": ["EXTENSIONS", "IDENTITY", "SHARED CLIENT", "FABRIC SHELL"]
+    }
+  ],
+  "filters": [
+    { "id": "architecture", "label": "Frontend architecture", "records": ["amplitude-2022", "microsoft-2020", "amazon-2018"], "stations": ["signal", "delivery"] },
+    { "id": "infrastructure", "label": "SDK & infrastructure", "records": ["microsoft-2026", "amplitude-2022", "amazon-2018"], "stations": ["core", "signal", "delivery"] },
+    { "id": "performance", "label": "Web performance", "records": ["microsoft-2020", "amazon-2018"], "stations": ["delivery"] },
+    { "id": "platform", "label": "Platform engineering", "records": ["microsoft-2026", "amplitude-2022"], "stations": ["core", "signal"] }
+  ]
+}

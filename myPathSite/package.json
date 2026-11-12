@@ -1,0 +1,33 @@
+{
+  "name": "personal-page",
+  "private": true,
+  "version": "1.2.0",
+  "homepage": "https://deanshi.com",
+  "description": "This is Dean Shi's personal page to exhibit experience, education and skills",
+  "author": "Dean Shi <dean.xiaoshi@gmail.com> (https://github.com/dnshi)",
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "npx serve ./dist",
+    "build": "npm run typecheck && npm run clean && node scripts/build.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.cjs",
+    "clean": "rm -rf ./dist"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnshi/www"
+  },
+  "dependencies": {
+    "three": "^0.181.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.181.0",
+    "ejs": "^3.1.10",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.0"
+  }
+}
